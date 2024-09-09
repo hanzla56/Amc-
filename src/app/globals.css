@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+ 
+.slider-container {
+  overflow: hidden;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
+
+ 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background: #0d0c0f;
+}
+ 
+
+
+
+.trailerbtn{
+  background-color: #D71134 !important;
+  text-transform: capitalize !important;
+  display:flex;
+  gap: 6px;
+  font-weight: 700 !important;
+}
+.btnadd SVG{
+  font-size:20px ;
+}
+.trailerbtn SVG{
+  font-size:20px ;
+}
+.btnadd{
+  text-transform: capitalize !important;
+  display:flex;
+  gap: 6px;
+  font-weight: 700 !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-pagination-bullet{
+  background-color: #6b6b71 !important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: white !important;
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+width:100%!important;
+display: flex;
+bottom: 80px !important;
+padding-right:5rem !important;
+justify-content: flex-end;
+
+
 }
