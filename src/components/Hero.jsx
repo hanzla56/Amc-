@@ -12,10 +12,14 @@ import logo from "@/assets/logo.png";
 import Link from "next/link";
 import Login from "./Login";
 import Signup from "./Signup";
+import Plan from "./Plan";
+import EmailVerification from "./EmailVerification";
 
 const Hero = () => {
   const [open, setOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false); 
+  const [isPlan, setIsPlan] = useState(false); 
+  const [isVerify, setisVerify] = useState(false); 
 
   return (
     <>
@@ -81,11 +85,27 @@ const Hero = () => {
             >
               Login
             </Button>
+            <Button
+              onClick={() => setIsPlan(true)}
+              variant="contained"
+              className="trailerbtn"
+            >
+              Plan
+            </Button>
+            <Button
+              onClick={() => setisVerify(true)}
+              variant="contained"
+              className="trailerbtn"
+            >
+              Verify
+            </Button>
           </div>
         </div>
       </div>
       <Login open={open} setOpen={setOpen} />
       <Signup open={isLogin} setOpen={setIsLogin} />
+      <Plan open={isPlan} setOpen={setIsPlan} />
+      <EmailVerification open={isVerify} setOpen={setisVerify} />
 
     </>
   );

@@ -22,9 +22,9 @@ const Signup = ({ open, setOpen }) => {
             onClose={()=>setOpen(false)}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            sx={{backgroundColor: "#000000de"}}
+            sx={{backgroundColor: "#000000de", overflowY: "auto"}}
         >
-            <Box sx={style.modal} >
+            <Box sx={{ width: { xs: '100%', sm: '600px' }, ...style.modal}}>
                 <Box>
                     <img className="m-auto" src={logo.src} alt="logo" />
                 </Box>
