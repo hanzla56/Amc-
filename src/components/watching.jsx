@@ -44,16 +44,17 @@ const Watching = () => {
                 {/* Previous Button */}
                 {currentIndex > 0 && (
                     <button
-                        className="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
+                        className="absolute-left-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
                         onClick={prevCard}>
                         <IoIosArrowBack />
                     </button>
                 )}
+                asd
 
                 {/* Next Button */}
                 {currentIndex < watchDAta.length - cardsPerView && (
                     <button
-                        className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
+                        className="absolute-right-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
                         onClick={nextCard}
                     >
                         <IoIosArrowForward />
