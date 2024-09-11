@@ -21,13 +21,13 @@ const Login = ({ open, setOpen }) => {
             onClose={()=>setOpen(false)}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
-            sx={{backgroundColor: "#000000de"}}
+            sx={{backgroundColor: "#000000de", overflowY: "auto"}}
         >
-            <Box sx={style.modal} >
+            <Box sx={{ width: { xs: '100%', sm: '600px' }, ...style.modal}}>
                 <Box>
                     <img className="m-auto" src={logo.src} alt="logo" />
                 </Box>
-                <Box sx={style.modal_fields} className="mt-5 login_signup_form">
+                <Box sx={style.modal_fields} className="mt-5">
 
                     <InputLabel sx={{color: '#fff', mb:'10px' }}>Email</InputLabel>
                     <TextField placeholder='Email' sx={{backgroundColor: '#fff', borderRadius:'8px', width: '100%', mb:'20px'}} type='email' size='large' variant={'outlined'} />

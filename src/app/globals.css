@@ -15,10 +15,20 @@
 body {
   color: white;
   background: #0d0c0f;
+
 }
  
+hr{
+  margin: 15px 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+h6{
 
+  font-weight: 600 !important;
+  margin-bottom: 20px !important;
 
+}
 
 .trailerbtn{
   background-color: #D71134 !important;
@@ -53,53 +63,4 @@ display: flex;
 bottom: 80px !important;
 padding-right:5rem !important;
 justify-content: flex-end;
-
-
 }
-/* .login_signup_form{
-  border: 1px solid #28262D;
-  background-color:  Black;
-  border-radius: 24px;
-  text-align: center;
-  padding: 30px;
-} */
-/* .login_signup_form label{
-  margin-bottom: 10px;
-}
-.login_signup_form .form_field{
-  text-align: left !important;
-
-}
-.login_signup_form input{
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
-  color: black;
-  outline: none;
-}
-.login_signup_form input::placeholder{
-  color: black;
-}
-
-.login_signup_form .form_btns button{
-  padding: 12px 20px ;
-  border-radius: 16px;
-  border: 1px solid #FFFFFF;
-  width: 100%;
-  margin-top: 20px;
-  
-} 
-.login_signup_form .signup_redirect{
-  margin-top: 25px;
-}
-.login_signup_form .signup_redirect span{
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.005em;
-  text-align: center;
-
-} */
