@@ -1,6 +1,5 @@
 "use client";
-import { useState } from 'react';
-import {  watchDAta } from "@/assets/data";
+import { useState } from 'react'; 
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { StarIcons } from '@/assets/Icons';
@@ -11,8 +10,8 @@ const Movies = ({data,title,live}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(5);
 
-    const nextCard = () => {
-        if (currentIndex < watchDAta.length - cardsPerView) {
+    const nextCard = () => { 
+        if (currentIndex < data.length - cardsPerView) {
             setCurrentIndex(currentIndex + 1);
         }
     };
@@ -64,7 +63,7 @@ const Movies = ({data,title,live}) => {
                 )}
 
                 {/* Next Button */}
-                {currentIndex < watchDAta.length - cardsPerView && (
+                {currentIndex < data.length - cardsPerView && (
                     <div className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
                         style={{ background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)" }}>
                         <button

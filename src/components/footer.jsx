@@ -11,7 +11,8 @@ const Footer = () => {
   
   return (
     <>
-      <div className="max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
+     <footer className="border-t border-[#FFFFFF1A]">
+     <div className="max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
         <Grid container sx={{ justifyContent: "space-between", pt: "50px" }}>
           <Grid item sm={12} md={4}>
             <Typography variant="h6" component="h6">
@@ -77,6 +78,7 @@ const Footer = () => {
           </Grid>
         </Grid>
       </div>
+     </footer>
     </>
   );
 };

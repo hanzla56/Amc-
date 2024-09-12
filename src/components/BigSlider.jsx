@@ -8,7 +8,7 @@ import { MdOutlineBookmarkBorder } from 'react-icons/md';
 
 const BigSlider = () => {
     const [selectedCardIndex, setSelectedCardIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(3); // Set default cards per view
+    const [cardsPerView, setCardsPerView] = useState(3);  
 
     const handleNext = () => {
         if (selectedCardIndex < cardsData.length - cardsPerView) {
@@ -63,7 +63,9 @@ const BigSlider = () => {
                         <div
                             key={card.id}
                             onClick={() => setSelectedCardIndex(index)}
-                            className={`w-full img_slider cursor-pointer h-[412px] relative  rounded-[16px] transition-transform duration-300 ${index === selectedCardIndex ? 'border-4 border-[#D71134]' : ''}`}
+                            className={`w-full img_slider cursor-pointer h-[412px] relative  rounded-[16px] transition-transform duration-300
+                                 ${index === selectedCardIndex ? 'border-4 border-[#D71134]' : ''}`}
+
                             style={{ background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 78.02%),
                                 url(${card.imageUrl.src})`, minWidth: `calc(95% / ${cardsPerView})` }}>
                              <div className='absolute bottom-5 left-5'>
