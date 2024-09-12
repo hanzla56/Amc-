@@ -3,68 +3,90 @@
 @tailwind utilities;
 
 
- 
+
 .slider-container {
   overflow: hidden;
   width: 100%;
 }
 
 
+.back_img {
+  background-position: center !important;
+  background-size: cover !important;
+}
 
- 
+.btnlike {
+  background: black !important;
+  text-transform: capitalize !important;
+  display: flex;
+  gap: 4px;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  align-items: center;
+}
+
 body {
   color: white;
   background: #0d0c0f;
 
 }
- 
-hr{
+
+hr {
   margin: 15px 0px;
   color: #ffffff;
   opacity: 1;
 }
-h6{
+
+h6 {
 
   font-weight: 600 !important;
   margin-bottom: 20px !important;
 
 }
 
-.trailerbtn{
+.trailerbtn {
   background-color: #D71134 !important;
   text-transform: capitalize !important;
-  display:flex;
-  gap: 6px;
-  font-weight: 700 !important;
-}
-.btnadd SVG{
-  font-size:20px ;
-}
-.trailerbtn SVG{
-  font-size:20px ;
-}
-.btnadd{
-  text-transform: capitalize !important;
-  display:flex;
+  display: flex;
   gap: 6px;
   font-weight: 700 !important;
 }
 
-.swiper-pagination-bullet{
+.btnadd SVG {
+  font-size: 20px;
+}
+
+.trailerbtn SVG {
+  font-size: 20px;
+}
+
+.btnadd {
+  text-transform: capitalize !important;
+  display: flex;
+  gap: 6px;
+  font-weight: 700 !important;
+}
+
+.swiper-pagination-bullet {
   background-color: #6b6b71 !important;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background-color: white !important;
 }
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-width:100%!important;
-display: flex;
-bottom: 80px !important;
-padding-right:5rem !important;
-justify-content: flex-end;
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: 100% !important;
+  display: flex;
+  bottom: 80px !important;
+  padding-right: 5rem !important;
+  justify-content: flex-end;
 }
-.img_slider{
+
+.img_slider {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -77,3 +99,28 @@ justify-content: flex-end;
 
 
 
+
+.tab_container .react-tabs__tab-list {
+  border: none;
+}
+
+.react-tabs__tab {
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 10px 0px !important;
+  display: flex;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+.tab_container .react-tabs__tab--selected {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid #F10606;
+  opacity: 10;
+}
+
+.react-tabs__tab:focus:after {
+  background-color: transparent !important;
+}

@@ -4,12 +4,12 @@ import { watchDAta } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
-const Watching = () => {
+const Watching = ({data}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(3);
+    const [cardsPerView, setCardsPerView] = useState(4);
 
     const nextCard = () => {
-        if (currentIndex < watchDAta.length - cardsPerView) {
+        if (currentIndex < data.length - cardsPerView) {
             setCurrentIndex(currentIndex + 1);
         }
     };
@@ -26,16 +26,16 @@ const Watching = () => {
                 <h1 className='text-[24px] font-bold my-5'>Continue Watching</h1>
 
                 {/* Slider Container */}
-                <div className="slider-container overflow-hidden">
+                <div className=" overflow-hidden">
                     <div
                         className={`flex w-full gap-6`}
                         style={{
                             transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
                             transition: 'transform 0.4s ease-in-out',
                         }}>
-                        {watchDAta.map((item, i) => (
+                        {data.map((item, i) => (
                             <div key={i}  style={{minWidth:`calc(94% / ${cardsPerView})`}}>
-                                <img src={item?.img.src} alt="image"  />
+                                <img src={item?.img.src} alt="image" className='w-full'  />
                             </div>
                         ))}
                     </div>
@@ -43,22 +43,27 @@ const Watching = () => {
 
                 {/* Previous Button */}
                 {currentIndex > 0 && (
-                    <button
-                        className="absolute-left-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
-                        onClick={prevCard}>
-                        <IoIosArrowBack />
-                    </button>
+                   <div className='absolute left-0 w-[160px] top-10 bottom-0 flex items-center'
+                   style={{ background: "linear-gradient(90deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)" }}>
+                   <button
+                       className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
+                       onClick={prevCard}>
+                       <IoIosArrowBack />
+                   </button>
+               </div>
                 )}
-                asd
+               
 
                 {/* Next Button */}
-                {currentIndex < watchDAta.length - cardsPerView && (
+                {currentIndex < data.length - cardsPerView && (
+                    <div className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
+                    style={{ background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)" }}>
                     <button
-                        className="absolute-right-10 top-1/2 transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
-                        onClick={nextCard}
-                    >
+                        className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
+                        onClick={nextCard}>
                         <IoIosArrowForward />
                     </button>
+                </div>
                 )}
             </div>
         </>

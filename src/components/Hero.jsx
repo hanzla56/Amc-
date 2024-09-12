@@ -83,7 +83,7 @@ const Hero = ({herodata}) => {
             >
               Login
             </Button>
-            {/* <Button
+            <Button
               onClick={() => setIsPlan(true)}
               variant="contained"
               className="trailerbtn"
@@ -96,7 +96,7 @@ const Hero = ({herodata}) => {
               className="trailerbtn"
             >
               Verify
-            </Button> */}
+            </Button>
           </div>
         </div>
       </div>

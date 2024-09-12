@@ -9,6 +9,7 @@ import BigSlider from '@/components/BigSlider'
 import Movies from '@/components/Movies'
 import Footer from '@/components/Footer'
 import MoviesThumbnail from '@/components/MoviesThumbnail'
+import Reels from '@/components/Reels'
 
 const Discover = () => {
 
@@ -76,6 +77,7 @@ const Discover = () => {
       <Movies data={Seriesdata} title="Series" live={false}/>
       <Movies data={Streamdata} title="AMC Streams Exclusives" live={false}/>
       <Movies data={Livedata} title="Live" live={true}/>
+      <Reels/>
       <MoviesThumbnail/>
       <Footer/>
     </div>
