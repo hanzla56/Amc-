@@ -1,37 +1,37 @@
 "use client"
-import { useState, useEffect } from 'react';
-import Hero from "@/components/Hero"; 
-import { franchiesdata, moviesdata, Seriesdata,Streamdata,Livedata, herodata1 } from "@/assets/data"; 
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
-import JustRelease from '@/components/JustRelease';
-import Popularoftheweek from '@/components/Popularoftheweek';
-import BigSlider from '@/components/BigSlider';
-import Movies from '@/components/Movies';
-import Footer from '@/components/Footer';
+import React,{useState} from 'react'
+import { franchiesdata, herodata1, herodata2, Livedata, moviesdata, Seriesdata, Streamdata } from '@/assets/data'
+import Hero from '@/components/Hero'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import JustRelease from '@/components/JustRelease'
+import Popularoftheweek from '@/components/Popularoftheweek'
+import BigSlider from '@/components/BigSlider'
+import Movies from '@/components/Movies'
+import Footer from '@/components/Footer'
+import MoviesThumbnail from '@/components/MoviesThumbnail'
 
-export default function Home() {
+const Discover = () => {
 
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = 5; 
-  
-  const nextCard = () => {
-    if (currentIndex < franchiesdata.length - cardsPerView) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-  const prevCard = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const cardsPerView = 5; 
+    
+    const nextCard = () => {
+      if (currentIndex < franchiesdata.length - cardsPerView) {
+        setCurrentIndex(currentIndex + 1);
+      }
+    };
+    const prevCard = () => {
+      if (currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1);
+      }
+    };
 
 
   return (
-    <>
-      <Hero  herodata={herodata1}/>
+    <div>
+        <Hero herodata={herodata2}/>
         <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
         {/* Slider Container */}
         <div className="slider-container">
@@ -76,7 +76,10 @@ export default function Home() {
       <Movies data={Seriesdata} title="Series" live={false}/>
       <Movies data={Streamdata} title="AMC Streams Exclusives" live={false}/>
       <Movies data={Livedata} title="Live" live={true}/>
-     <Footer/>
-    </>
-  );
+      <MoviesThumbnail/>
+      <Footer/>
+    </div>
+  )
 }
+
+export default Discover
