@@ -3,23 +3,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import { herodata } from "@/assets/data";
 import Button from "@mui/material/Button";
 import { IoPlayCircle } from "react-icons/io5";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
 import logo from "@/assets/logo.png";
-
 import Link from "next/link";
 import Login from "./Login";
 import Signup from "./Signup";
 import Plan from "./Plan";
 import EmailVerification from "./EmailVerification";
 
-const Hero = () => {
+const Hero = ({herodata}) => {
+
+
   const [open, setOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(false); 
-  const [isPlan, setIsPlan] = useState(false); 
-  const [isVerify, setisVerify] = useState(false); 
+  const [isLogin, setIsLogin] = useState(false);
+  const [isPlan, setIsPlan] = useState(false);
+  const [isVerify, setisVerify] = useState(false);
 
   return (
     <>
@@ -34,13 +34,11 @@ const Hero = () => {
             >
               <div
                 className="absolute bottom-10 2xl:bottom-20
-                             left-0 mx-auto right-0 z-10 max-w-[1150px] 2xl:max-w-[1550px]"
-              >
+                             left-0 mx-auto right-0 z-10 max-w-[1150px] 2xl:max-w-[1550px]">
                 <Button
                   variant="contained"
                   className="btnadd"
-                  style={{ background: "#0D0C0F", borderRadius: "50px" }}
-                >
+                  style={{ background: "#0D0C0F", borderRadius: "50px" }}>
                   {item?.category}
                 </Button>
                 <h1 className="text-[32px] font-bold mt-2">{item?.title}</h1>
@@ -69,7 +67,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-5">
             <Link href="/">Home</Link>
-            <Link href="/">Discover</Link>
+            <Link href="/discover">Discover</Link>
             <Link href="/">AMC Kids</Link>
             <Link href="/">Influence</Link>
             <Link href="/">Español</Link>
@@ -85,7 +83,7 @@ const Hero = () => {
             >
               Login
             </Button>
-            <Button
+            {/* <Button
               onClick={() => setIsPlan(true)}
               variant="contained"
               className="trailerbtn"
@@ -98,7 +96,7 @@ const Hero = () => {
               className="trailerbtn"
             >
               Verify
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

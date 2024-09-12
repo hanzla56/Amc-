@@ -12,7 +12,7 @@ import {
 import Container from "@mui/material/Container";
 import { style } from "@/assets/style.jsx";
 import AvatarIcon from "@/assets/Avatar.png";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 const profile = () => {
   return (

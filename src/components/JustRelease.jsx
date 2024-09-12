@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { Releasedata, watchDAta } from "@/assets/data";
+import { Releasedata } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -9,7 +9,7 @@ const JustRelease = () => {
     const [cardsPerView, setCardsPerView] = useState(5);
 
     const nextCard = () => {
-        if (currentIndex < watchDAta.length - cardsPerView) {
+        if (currentIndex < Releasedata.length - cardsPerView) {
             setCurrentIndex(currentIndex + 1);
         }
     };
@@ -43,7 +43,7 @@ const JustRelease = () => {
 
                 {/* Previous Button */}
                 {currentIndex > 0 && (
-                  <div className='absolute left-0 w-[100px] top-10 bottom-0 flex items-center'
+                  <div className='absolute left-0 w-[160px] top-10 bottom-0 flex items-center'
                   style={{background: "linear-gradient(90deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}> 
                       <button
                         className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
@@ -54,8 +54,8 @@ const JustRelease = () => {
                 )}
 
                 {/* Next Button */}
-                {currentIndex < watchDAta.length - cardsPerView && (
-                  <div  className='absolute right-0 top-10 bottom-0 w-[100px] flex items-center justify-end'
+                {currentIndex < Releasedata.length - cardsPerView && (
+                  <div  className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
                   style={{background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}>
                       <button
                         className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"

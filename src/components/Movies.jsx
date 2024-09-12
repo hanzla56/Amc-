@@ -1,15 +1,15 @@
 "use client";
 import { useState } from 'react';
-import { dataweek, watchDAta } from "@/assets/data";
+import {  watchDAta } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import { MovieIcons, StarIcons } from '@/assets/Icons';
+import { StarIcons } from '@/assets/Icons';
 
-const Popularoftheweek = () => {
+const Movies = ({data,title,live}) => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(4);
+    const [cardsPerView, setCardsPerView] = useState(5);
 
     const nextCard = () => {
         if (currentIndex < watchDAta.length - cardsPerView) {
@@ -25,33 +25,27 @@ const Popularoftheweek = () => {
     return (
         <>
             <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-5 pb-10">
-                <h1 className='text-[24px] font-bold my-5'>Popular of the week</h1>
+                <div className='text-[24px] font-bold my-5 flex items-center gap-2'>{title} 
+                   {live && <div className='bg-[#FF0000] rounded-full p-1 w-fit h-fit'></div>}
+                    </div>
 
                 {/* Slider Container */}
-                <div className="slider-container overflow-hidden">
+                <div className="overflow-hidden">
                     <div
-                        className={`flex w-full`}
+                        className={`flex w-full gap-5`}
                         style={{
                             transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
                             transition: 'transform 0.4s ease-in-out',
                         }}>
-                        {dataweek.map((item, i) => (
-                            <div key={i} className='flex gap-3 w-full' style={{ minWidth: `calc(100% / ${cardsPerView})` }}>
-                                <div>
-                                    <img src={item?.img.src} alt="image" className='min-w-[107px]'/>
-                                </div>
-                               <div className='flex items-center gap-8 w-full justify-between h-full pr-2'>
-                               <div className='flex flex-col justify-between gap-3'>
-                                    <p className='border-[#28262D] px-2 py-1 rounded border-[1px] w-fit text-[12px]'>PG-13</p>
+                        {data.map((item, i) => (
+                            <div key={i} className='w-full' style={{ minWidth: `calc(110% / ${cardsPerView})` }}>
+                                    <img src={item?.img.src} alt="image" className='w-full'/>
+                                  <div className='mt-2'>
                                     <h1 className='text-[16px] font-bold'>{item?.title}</h1>
-                                    <div className='flex items-center text-[#78828A] text-[12px] gap-1'>
-                                        <MovieIcons /> {item?.category}</div>
-                                    <div className='text-[12px] flex items-center gap-1'>
-                                        <StarIcons /> {item?.rate} <p className='text-[#78828A]'>| Movie</p>
-                                    </div>
+                                   {!live && <div className='text-[12px] flex items-center gap-1 mt-2'>
+                                        <StarIcons /> 4.6 <p className='text-[#78828A] text-[12px]'>| Action • Movie</p>
+                                    </div>}
                                 </div>
-                                <h1 className='text-[48px] font-bold'>{i+1}</h1>
-                               </div>
                             </div>
                         ))}
                     </div>
@@ -85,4 +79,4 @@ const Popularoftheweek = () => {
     );
 };
 
-export default Popularoftheweek;
+export default Movies;

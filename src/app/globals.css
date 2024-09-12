@@ -64,3 +64,16 @@ bottom: 80px !important;
 padding-right:5rem !important;
 justify-content: flex-end;
 }
+.img_slider{
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
