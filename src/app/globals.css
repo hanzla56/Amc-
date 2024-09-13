@@ -124,3 +124,13 @@ h6 {
 .react-tabs__tab:focus:after {
   background-color: transparent !important;
 }
+
+.radiobtn span{
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.5%;
+}
+
+
+
+ 

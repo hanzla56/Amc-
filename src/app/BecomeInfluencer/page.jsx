@@ -1,19 +1,17 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
-import imgslider from "@/assets/Poster.png";
-import logo from "@/assets/logo.png";
+import { Box, Button, Typography } from "@mui/material"; 
 import badges from "@/assets/badges2.png";
 import Grid from "@mui/material/Grid";
 import { style } from "@/assets/style.jsx";
 import Banner1 from "@/components/banner1";
 
 const BecomeInfluencer = () => {
+
   return (
     <>
       <Banner1
         title="Become A Movie Influencer" 
-        subheading="Join and Share your reels and thoughts!"
-      />
+        subheading="Join and Share your reels and thoughts!"/>
 
       <Box>
         <Grid container sx={{ justifyContent: "center" }}>

@@ -24,7 +24,7 @@ const MoviesThumbnail = () => {
     };
 
     return (
-        <div className="h-[600px] img_slider relative"
+        <div className="h-[600px] img_slider relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto"
             style={{
                 background: `linear-gradient(180deg, #0D0C0F 0.08%, rgba(13, 12, 15, 0.0416667) 22.17%, rgba(13, 12, 15, 0.0976244) 58.89%, #0D0C0F 100%),
                 linear-gradient(82.22deg, rgba(13, 12, 15, 0.9) 36.24%, rgba(13, 12, 15, 0) 58.67%)
@@ -32,7 +32,7 @@ const MoviesThumbnail = () => {
             }}>
 
 
-            <div className="relative z-10 text-white max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-auto pt-5">
+            <div className="relative z-10 text-white pt-5">
                 <div className='bg-[#0000003D] px-2 py-1 rounded w-fit my-5'>Explore by the genre</div>
                 <h1 className="text-[48px] font-bold leading-[54px] max-w-[537px]">{thumbnails[selectedGenreIndex].title}</h1>
                 <p className="mt-4 text-[12px] flex items-center gap-1 my-2"><StarIcons /> 4.5 |  2h40m • 2022 • Superhero • Actions</p>
