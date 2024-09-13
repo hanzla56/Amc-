@@ -1,5 +1,5 @@
 import React from 'react'
-import accounts_logo from "@/assets/info.svg"
+import accounts_logo from "@/assets/logo.png"
 import sc1_icon from "@/assets/sc1.svg"
 import sc2_icon from "@/assets/sc2.svg"
 import sc3_icon from "@/assets/sc3.svg"

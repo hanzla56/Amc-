@@ -8,13 +8,10 @@
   overflow: hidden;
   width: 100%;
 }
-
-
 .back_img {
   background-position: center !important;
   background-size: cover !important;
 }
-
 .btnlike {
   background: black !important;
   text-transform: capitalize !important;
@@ -24,26 +21,21 @@
   font-size: 14px !important;
   align-items: center;
 }
-
 body {
   color: white;
   background: #0d0c0f;
 
 }
-
 hr {
   margin: 15px 0px;
   color: #ffffff;
   opacity: 1;
 }
-
 h6 {
-
   font-weight: 600 !important;
   margin-bottom: 20px !important;
 
 }
-
 .trailerbtn {
   background-color: #D71134 !important;
   text-transform: capitalize !important;
@@ -51,30 +43,24 @@ h6 {
   gap: 6px;
   font-weight: 700 !important;
 }
-
 .btnadd SVG {
   font-size: 20px;
 }
-
 .trailerbtn SVG {
   font-size: 20px;
 }
-
 .btnadd {
   text-transform: capitalize !important;
   display: flex;
   gap: 6px;
   font-weight: 700 !important;
 }
-
 .swiper-pagination-bullet {
   background-color: #6b6b71 !important;
 }
-
 .swiper-pagination-bullet-active {
   background-color: white !important;
 }
-
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,
@@ -85,25 +71,15 @@ h6 {
   padding-right: 5rem !important;
   justify-content: flex-end;
 }
-
 .img_slider {
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   margin-top: 2rem;
 }
-
-
-
-
-
-
-
-
 .tab_container .react-tabs__tab-list {
   border: none;
 }
-
 .react-tabs__tab {
   font-size: 16px;
   color: #FFFFFF;
@@ -112,7 +88,6 @@ h6 {
   margin: 0 10px;
   opacity: 0.5;
 }
-
 .tab_container .react-tabs__tab--selected {
   background-color: transparent;
   border: none;
@@ -120,26 +95,16 @@ h6 {
   border-bottom: 1px solid #F10606;
   opacity: 10;
 }
-
 .react-tabs__tab:focus:after {
   background-color: transparent !important;
 }
-
 .radiobtn span{
   font-weight: 600 !important;
   font-size: 14px !important;
   letter-spacing: 0.5%;
 }
 
-
-
- 
-
-
-
-
-
-
+/* Accounts_Style_Start ===============*/
 
 .accounts_section{
   height: auto;
@@ -269,6 +234,8 @@ h6 {
   color: #fff;
   user-select: none;
 }
+
+/* Influencer_Style_Start ===============*/
 .influence_section{
   background: #08080A;
   height: auto;
@@ -277,7 +244,7 @@ h6 {
 .influ_top_img{
   position: relative;
 }
-.influ_top_img img{
+.influ_top_img .influ_main_img{
   width: 100%;
   height: 60vh;
   min-height: 500px;
@@ -291,4 +258,245 @@ h6 {
   bottom: 0;
   background: linear-gradient(358.93deg, #0D0C0F 0.83%, rgba(13, 12, 15, 0.85) 28.55%, rgba(13, 12, 15, 0.57) 48.81%, rgba(13, 12, 15, 0.284314) 70.66%, #0D0C0F 103.18%);
   pointer-events: none;
+}
+.influ_top_img .overlay_text_main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  width: 100%;
+  max-width: 1300px;
+  height: 40vh;
+  min-height: 350px;
+  padding: 30px 30px;
+}
+.influ_top_img .overlay_text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.influ_top_img .overlay_text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  text-align: left;  
+  color: #F9F9F9;
+}
+.over_logo{
+  text-align: center;
+}
+.over_logo img{
+  height: 50px;
+  width: auto;
+  margin: 20px auto;
+}
+.influence_bottom_card{
+  background: #0D0C0F;
+  border: 1px solid #28262D;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+}
+.influence_bottom_text h1{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.influence_bottom_img img{
+  width: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+.influence_bottom_buttons{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+.influence_bottom_buttons button{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  padding: 12px 12px;
+}
+
+/* Subscription_Style_Start */
+
+.subscription_section{
+  background: #08080A;
+  height: auto;
+  min-height: 100vh;
+} 
+.subscription_inner{
+  width: 100%;
+  max-width: 1340px;
+  padding: 0px 30px;
+  margin: auto;
+}
+.subs_logo{
+  text-align: center;
+  padding-top: 20px;
+}
+.subs_logo img{
+  height: 45px;
+  width: auto;
+  margin: auto;
+}
+.subs_title h3{
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #fff;
+  margin-top: 30px;
+}
+.subscription_cards_main{
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.subscription_card_body{
+  width: 100%;
+  max-width: 400px;
+  background: #0D0C0F;
+  padding: 20px 25px;
+  border-radius: 24px;
+  height: auto;
+  min-height: 650px;
+  border: 1px solid #28262D;
+}
+.subscription_card_text1{
+  background: #0D0C0F;
+  border: 1px solid #28262D;
+  padding: 15px;
+  text-align: center;
+  border-radius: 24px;
+}
+.subscription_card_text1 p{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.subscription_border{
+  border: 1px solid #FFFFFF;
+  margin-top: 10px;
+}
+.subscription_card_text2{
+  margin-top: 15px;
+}
+.subscription_card_text2 p{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 0;
+  padding-top: 8px;
+}
+.subscrip_bottom_button{
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 60px;
+  padding-bottom: 50px;
+}
+.subscrip_bottom_button button{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  padding: 12px 12px;
+}
+.email_verfi_section{
+  background: #08080A;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email_veri_inner{
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  padding: 30px 0px;
+}
+.email_veri_card_body_div{
+  margin-top: 100px;
+  width: 100%;
+  background: #0D0C0F;
+  padding: 30px 20px;
+  border-radius: 24px;
+  height: auto;
+  border: 1px solid #28262D;
+  text-align: center;
+}
+.email_veri_card_body_div img{
+  height: 35px;
+  width: auto;
+  margin: auto;
+}
+.email_veri_card_body_div h1{
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #fff;
+  padding-top: 8px;
+}
+.email_veri_card_body_div span{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #fff;
+}
+.email_veri_card_body_div p{
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #fff;
+}
+.email_veri_card_body_div button{
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  padding: 12px 12px;
 }
