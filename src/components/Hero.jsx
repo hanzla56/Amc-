@@ -29,9 +29,7 @@ const Hero = ({herodata}) => {
             <div
               className="min-h-screen relative bg-no-repeat bg-cover w-full h-full bg-center "
               style={{
-                backgroundImage: `linear-gradient(358.93deg, #0D0C0F 0.83%, rgba(13, 12, 15, 0.85) 28.55%, rgba(13, 12, 15, 0) 48.81%, rgba(13, 12, 15, 0.284314) 70.66%, #0D0C0F 103.18%), url(${item?.img.src})`,
-              }}
-            >
+                backgroundImage: `linear-gradient(358.93deg, #0D0C0F 0.83%, rgba(13, 12, 15, 0.85) 28.55%, rgba(13, 12, 15, 0) 48.81%, rgba(13, 12, 15, 0.284314) 70.66%, #0D0C0F 103.18%), url(${item?.img.src})`,}}>
               <div
                 className="absolute bottom-10 2xl:bottom-20
                              left-0 mx-auto right-0 z-10 max-w-[1150px] 2xl:max-w-[1550px]">
@@ -69,7 +67,7 @@ const Hero = ({herodata}) => {
             <Link href="/">Home</Link>
             <Link href="/discover">Discover</Link>
             <Link href="/">AMC Kids</Link>
-            <Link href="/">Influence</Link>
+            <Link href="/influence">Influence</Link>
             <Link href="/">Español</Link>
           </div>
           <div className="flex items-center gap-5">

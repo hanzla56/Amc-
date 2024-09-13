@@ -9,6 +9,7 @@ import Popularoftheweek from '@/components/Popularoftheweek';
 import BigSlider from '@/components/BigSlider';
 import Movies from '@/components/Movies';
 import Footer from '@/components/Footer';
+import Reels from '@/components/Reels';
 
 export default function Home() {
 
@@ -76,6 +77,7 @@ export default function Home() {
       <Movies data={Seriesdata} title="Series" live={false}/>
       <Movies data={Streamdata} title="AMC Streams Exclusives" live={false}/>
       <Movies data={Livedata} title="Live" live={true}/>
+      <Reels title="Featured Reels"/>
      <Footer/>
     </>
   );

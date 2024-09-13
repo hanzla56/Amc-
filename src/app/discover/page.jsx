@@ -77,7 +77,7 @@ const Discover = () => {
       <Movies data={Seriesdata} title="Series" live={false}/>
       <Movies data={Streamdata} title="AMC Streams Exclusives" live={false}/>
       <Movies data={Livedata} title="Live" live={true}/>
-      <Reels/>
+      <Reels title="Featured Reels"/>
       <MoviesThumbnail/>
       <Footer/>
     </div>

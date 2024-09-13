@@ -8,7 +8,7 @@ const Movies = ({data,title,live}) => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(5);
+    const [cardsPerView, setCardsPerView] = useState(4);
 
     const nextCard = () => { 
         if (currentIndex < data.length - cardsPerView) {
@@ -37,7 +37,7 @@ const Movies = ({data,title,live}) => {
                             transition: 'transform 0.4s ease-in-out',
                         }}>
                         {data.map((item, i) => (
-                            <div key={i} className='w-full' style={{ minWidth: `calc(110% / ${cardsPerView})` }}>
+                            <div key={i} className='w-full' style={{ minWidth: `calc(93% / ${cardsPerView})` }}>
                                     <img src={item?.img.src} alt="image" className='w-full'/>
                                   <div className='mt-2'>
                                     <h1 className='text-[16px] font-bold'>{item?.title}</h1>

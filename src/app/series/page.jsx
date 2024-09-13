@@ -14,6 +14,7 @@ import { imageseries, watchList } from '@/assets/data'
 import Movies from '@/components/Movies'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import { IoIosArrowBack } from 'react-icons/io'
 
 
 const Series = () => {

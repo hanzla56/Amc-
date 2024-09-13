@@ -16,8 +16,7 @@ const Footer = () => {
         <Grid container sx={{ justifyContent: "space-between", pt: "50px" }}>
           <Grid item sm={12} md={4}>
             <Typography variant="h6" component="h6">
-              Our platform is trusted by millions & features best updated
-              movies all around the world.
+            Our platform is trusted by millions & features best updated movies all around the world.
             </Typography>
           </Grid>
           <Grid

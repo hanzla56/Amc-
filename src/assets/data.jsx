@@ -60,6 +60,23 @@ import rs1 from "./rs1.png"
 import rs2 from "./rs2.png"
 import rs3 from "./rs3.png"
 import rs4 from "./rs4.png"
+import tp1 from "./tp1.png"
+import tp2 from "./tp2.png"
+import tp3 from "./tp3.png"
+import tp4 from "./tp4.png"
+import tp5 from "./tp5.png"
+import tp6 from "./tp6.png"
+import tp7 from "./tp7.png"
+import tp8 from "./tp8.png"
+
+
+
+
+
+
+
+
+
 
 export const herodata1 = [
     {
@@ -531,7 +548,6 @@ export const watchList = [
     },
    
 ]
-
 export const imageseries = [
     {
         img:rs1
@@ -550,5 +566,40 @@ export const imageseries = [
     },
     {
         img:rs2
+    },
+]
+export const Hottopics = [
+
+    { 
+        title:"The Man from Toronto",
+        img:tp1,
+    },
+    { 
+        title:"The End Movie",
+        img:tp2,
+    },
+    { 
+        title:"Elvis",
+        img:tp3,
+    },
+    { 
+        title:"Three thousand years of ",
+        img:tp4,
+    },
+    { 
+        title:"Spiderman 3",
+        img:tp5,
+    },
+    { 
+        title:"Top Gun Maverick",
+        img:tp6,
+    },
+    { 
+        title:"The Mechanic",
+        img:tp7,
+    },
+    { 
+        title:"Spiderman; Into The",
+        img:tp8,
     },
 ]
