@@ -9,14 +9,15 @@ import { Button } from '@mui/material'
 
 
 const Signin = () => {
+
   return (
     <section className="accounts_section">
       <div className="accounts_inner_main">
         <div className="accounts_logo">
-        <img src={accounts_logo.src} alt="" />
+          <img src={accounts_logo.src} alt="" />
         </div>
         <div className="accounts_card_body_div">
-        <div className="accounts_input">
+          <div className="accounts_input">
             <label htmlFor="">Username</label>
             <input type="text" placeholder='Username' />
           </div>
@@ -33,8 +34,8 @@ const Signin = () => {
             <input type="password" placeholder='Confirm password' />
           </div>
           <div className='accounts_terms'>
-          <input type="checkbox" id='terms' />
-          <label htmlFor="terms">I agree to our <Link href="#">Privacy Policy</Link> and <Link href="#">Term & Conditions</Link></label>
+            <input type="checkbox" id='terms' />
+            <label htmlFor="terms">I agree to our <Link href="#">Privacy Policy</Link> and <Link href="#">Term & Conditions</Link></label>
           </div>
           <div className="accounts_btn">
             <Button variant="contained" className="trailerbtn">Continue</Button>
@@ -45,9 +46,9 @@ const Signin = () => {
           </div>
         </div>
         <div className="accounts_social_icons">
-        <img src={sc1_icon.src} alt="" />
-        <img src={sc2_icon.src} alt="" />
-        <img src={sc3_icon.src} alt="" />
+          <img src={sc1_icon.src} alt="" />
+          <img src={sc2_icon.src} alt="" />
+          <img src={sc3_icon.src} alt="" />
         </div>
       </div>
     </section>
