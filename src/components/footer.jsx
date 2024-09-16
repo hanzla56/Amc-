@@ -7,7 +7,6 @@ import GoogleIcon from "@/assets/Google.png";
 import TwitterIcon from "@/assets/Twitter.png";
 
 const Footer = () => {
-
   
   return (
     <>
