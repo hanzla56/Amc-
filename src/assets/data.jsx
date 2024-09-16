@@ -69,11 +69,27 @@ import tp6 from "./tp6.png"
 import tp7 from "./tp7.png"
 import tp8 from "./tp8.png"
 
+import pro1_img from "./pro1.svg"
+import pro2_img from "./pro2.svg"
+import pro3_img from "./pro3.svg"
 
 
 
 
-
+export const eventdata = [
+    {
+        title: 'Talk About Weak Hero S1: Episode 4',
+        img: pro1_img,
+    },
+    {
+        title: 'Talk About Satan’s Slaves: Communion',
+        img: pro2_img,
+    },
+    {
+        title: 'Talk About spipderman Into the spider',
+        img: pro3_img,
+    }
+]
 
 
 

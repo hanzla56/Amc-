@@ -483,3 +483,505 @@ h6 {
   letter-spacing: 0.005em;
   padding: 12px 12px;
 }
+
+/* POPULAR_DISCUSSION ================================== */
+
+.popular_dis_main{
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  margin-top: 40px; 
+}
+.popular_dis_left_main{
+  width: calc(75% - 30px);
+  height: auto;
+  min-height: 300px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #8298AB;
+}
+.pop_title{
+  color: #F9F9F9;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+.comments_title{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.popular_dis_left_card_body{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.popular_dis_left_card_body.card_active{
+  background: #090909;
+  border-radius: 24px;
+  padding: 20px;
+}
+.popular_dis_left_card_arrows{
+  height: 120px;
+  width: 60px;
+  background: #08080A;
+  border: 1px solid #28262D;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.popular_dis_left_card_arrows svg{
+  font-size: 28px;
+  color: #28262D;
+  cursor: pointer;
+}
+.popular_dis_left_card_arrows span{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #fff;
+}
+.popular_dis_left_card_text1 h2{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.popular_dis_left_card_text1 p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #9CA4AB;
+  padding-top: 8px;
+}
+.popular_dis_left_card_text_bottom{
+  padding-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular_dis_left_card_bottom_txt1{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.popular_dis_left_card_bottom_txt1 span{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #9CA4AB;
+}
+.popular_card1_right_img img{
+  height: 100px;
+  min-width: 150px;
+}
+.popular_dis_left_card_bottom_txt2{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.popular_dis_left_card_bottom_txt2_inner{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.popular_dis_left_card_bottom_txt2_inner span{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #9CA4AB;
+}
+.popular_dis_left_inner1{
+  display: flex;
+  gap: 20px;
+}
+.popular_dis_right_main{
+  width: 25%;
+}
+.popular_dis_right_card1{
+  background-color: #08080A;
+  height: auto;
+  min-height: 200px;
+  padding: 30px 20px;
+  border-radius: 24px;
+  margin-top: 30px;
+  text-align: center;
+}
+.popular_dis_right_card1 h1{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.popular_dis_right_card1 button{
+  margin: auto;
+  margin-top: 30px;
+}
+.show_more_btn{
+  margin-top: 50px;
+}
+.show_more_btn button{
+  margin: auto;
+  font-weight: 300;
+  border: 1px solid #29282F;
+  padding: 12px 20px;
+  border-radius: 16px;
+}
+.movie_premiere_event_main{
+  width: calc(75% - 30px);
+  height: auto;
+  min-height: 300px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #8298AB;
+}
+.movie_premiere_event_card_circle{
+  height: 55px;
+  min-width: 55px;
+  border-radius: 50%;
+  background: #F9F9F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie_premiere_event_card_circle span{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  color: #0D0C0F;
+}
+.movie_title{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.movie_premiere_event_card_body{
+  margin-top: 40px;
+  display: flex;
+  gap: 25px;
+}
+.movie_premiere_event_card_profile{
+  display: flex;
+  gap: 12px;
+}
+.movie_premiere_event_card_profile img{
+  height: 60px;
+  width: 60px;
+  border-radius: 16px;
+}
+.movie_premiere_event_card_profile h1{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.movie_premiere_event_card_profile p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #78828A;
+}
+.movie_premiere_event_card_txt h3{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.11999999731779099px;
+  text-align: left;
+  color: #F9F9F9;
+  margin-top: 16px;
+}
+.movie_premiere_event_card_txt p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: left;  
+  color: #9CA4AB;
+  padding-top: 6px;
+}
+.movie_premiere_event_card_txt ul li{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: left;  
+  color: #9CA4AB;
+  padding-top: 6px;
+  list-style: disc;
+}
+.more_txt{
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #D71134;
+  cursor: pointer;
+}
+.december_card_main{
+  padding-bottom: 60px;
+}
+.popular_dis_input_main{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 30px;
+}
+.popular_dis_input_main .male_img{
+  height: 35px;
+  width: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.popular_dis_input_div{
+  position: relative;
+  width: 100%;
+}
+.popular_dis_input_div input{
+  border: 1px solid #FFFFFF;
+  background-color: transparent;
+  padding: 7px 40px 7px 12px;
+  border-radius: 8px;
+  color: #9CA4AB;
+  width: 100%;
+}
+.popular_dis_input_div img{
+  position: absolute;
+  right: 10px;
+  top: 13px;
+
+}
+.popular_dis_right_profile_card{
+  background: #0D0C0F;
+  padding: 20px;
+}
+.popular_dis_right_profile_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popular_dis_right_profile_title h5{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #F9F9F9;
+}
+.popular_dis_right_profile_title span{
+  color: #D71134;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  display: flex;
+  gap: 3px;
+}
+.profile_card_top1{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+.profile_card_top1_img img{
+  height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile_card_top1_txt{
+  text-align: center;
+}
+.profile_card_top1_txt h2{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #F9F9F9;
+}
+.profile_card_top1_txt p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #9CA4AB;
+}
+.profile_card_discrip{
+  margin-top: 20px;
+}
+.profile_card_discrip h2{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #F9F9F9;
+}
+.profile_card_discrip p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.005em;
+  color: #9CA4AB;
+}
+.profile_card_discrip img{
+  margin-top: 20px;
+}
+.profile_card_discrip button{
+  margin: auto;
+  margin-top: 30px;
+  background: #28262D;
+  border-radius: 12px;
+  padding: 8px;
+  width: 250px;
+  color: #F9F9F9;
+  font-weight: 700;
+}
+.profile_card_discrip button svg{
+  margin-right: 8px;
+}
+.popular_dis_left_card_text_main{
+  width: 100%;
+}
+.discussion_section{
+  background: #0D0C0F;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+.popular_dis_left_comments{
+  padding-left: 80px;
+  margin-top: 30px;
+}
+.popular_dis_left_comments .popular_dis_left_inner1{
+  margin-top: 30px;
+}
+@media (max-width: 992px){
+  .popular_dis_main{
+    flex-direction: column;
+  }
+  .popular_dis_left_main{
+    width: 100%;
+  }
+  .popular_dis_right_main{
+    width: 100%;
+    max-width: 500px;
+  }
+  .movie_premiere_event_main{
+    width: 100%;
+  }
+}
+@media (max-width: 576px){
+  .popular_dis_left_comments{
+    padding-left: 20px;
+  }
+  .popular_dis_left_card_text1 h2 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    color: #F9F9F9;
+  }
+  .popular_dis_left_card_body {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column-reverse;
+}
+  .popular_dis_left_card_text_bottom{
+    gap: 8px;
+  }
+  .movie_premiere_event_card_profile h1 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    color: #F9F9F9;
+  }
+  .movie_premiere_event_card_body {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+  }
+  .popular_dis_left_card_bottom_txt2{
+    width: 100%;
+    justify-content: end;
+  }
+  .popular_dis_left_card_arrows svg {
+    font-size: 20px;
+    color: #28262D;
+    cursor: pointer;
+  }
+  .popular_dis_left_card_arrows {
+    height: 120px;
+    width: 50px;
+    background: #08080A;
+    border: 1px solid #28262D;
+    padding: 10px 10px;
+  }
+  .popular_card1_right_img img{
+    height: 80px;
+    min-width: 80px;
+  }
+  .popular_dis_left_card_text1 p {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .movie_premiere_event_card_circle {
+    height: 40px;
+    min-width: 40px;
+  }
+  .movie_premiere_event_card_circle span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 380px){
+  .popular_dis_right_card1 h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0.005em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .popular_dis_left_inner1 {
+    display: flex;
+    gap: 8px;
+  }
+}
