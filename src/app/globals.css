@@ -343,14 +343,12 @@ h6 {
 .subscription_section{
   background: #08080A;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 } 
-.subscription_inner{
-  width: 100%;
-  max-width: 1340px;
-  padding: 0px 30px;
-  margin: auto;
-}
+
 .subs_logo{
   text-align: center;
   padding-top: 20px;
@@ -367,17 +365,11 @@ h6 {
   letter-spacing: 0.005em;
   text-align: left;
   color: #fff;
-  margin-top: 30px;
+  margin-top:3rem;
 }
-.subscription_cards_main{
-  display: flex;
-  gap: 35px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
+
 .subscription_card_body{
-  width: 100%;
-  max-width: 400px;
+  width: 100%; 
   background: #0D0C0F;
   padding: 20px 25px;
   border-radius: 24px;
@@ -420,19 +412,10 @@ h6 {
   width: 100%;
   max-width: 400px;
   margin: auto;
-  margin-top: 60px;
-  padding-bottom: 50px;
 }
 .subscrip_bottom_button button{
-  width: 100%;
-  border-radius: 10px;
+  width: 100% !important;
   margin-top: 20px;
-  font-weight: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.005em;
-  padding: 12px 12px;
 }
 .email_verfi_section{
   background: #08080A;

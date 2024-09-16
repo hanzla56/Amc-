@@ -8,18 +8,11 @@ import { IoPlayCircle } from "react-icons/io5";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
-import Login from "./Login";
-import Signup from "./Signup";
-import Plan from "./Plan";
-import EmailVerification from "./EmailVerification";
+ 
 
 const Hero = ({herodata}) => {
 
-
-  const [open, setOpen] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
-  const [isPlan, setIsPlan] = useState(false);
-  const [isVerify, setisVerify] = useState(false);
+ 
 
   return (
     <>
@@ -71,37 +64,23 @@ const Hero = ({herodata}) => {
             <Link href="/">Español</Link>
           </div>
           <div className="flex items-center gap-5">
-            <Button onClick={() => setIsLogin(true)} variant="outlined" color="inherit" className="btnadd">
+           <Link href="/sign-up">
+           <Button   variant="outlined" color="inherit" className="btnadd">
               Sign up
             </Button>
+           </Link>
+           <Link href="/sign-in">
             <Button
-              onClick={() => setOpen(true)}
+             
               variant="contained"
-              className="trailerbtn"
-            >
+              className="trailerbtn">
               Login
-            </Button>
-            <Button
-              onClick={() => setIsPlan(true)}
-              variant="contained"
-              className="trailerbtn"
-            >
-              Plan
-            </Button>
-            <Button
-              onClick={() => setisVerify(true)}
-              variant="contained"
-              className="trailerbtn"
-            >
-              Verify
-            </Button>
+            </Button></Link>
+            
           </div>
         </div>
       </div>
-      <Login open={open} setOpen={setOpen} />
-      <Signup open={isLogin} setOpen={setIsLogin} />
-      <Plan open={isPlan} setOpen={setIsPlan} />
-      <EmailVerification open={isVerify} setOpen={setisVerify} />
+     
 
     </>
   );
