@@ -60,7 +60,7 @@ const Hero = ({herodata}) => {
             <Link href="/">Home</Link>
             <Link href="/discover">Discover</Link>
             <Link href="/">AMC Kids</Link>
-            <Link href="/influence">Influence</Link>
+            <Link href="/becom-Influencer">Influence</Link>
             <Link href="/">Español</Link>
           </div>
           <div className="flex items-center gap-5">

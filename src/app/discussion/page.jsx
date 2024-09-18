@@ -5,9 +5,10 @@ import pop1_img from "@/assets/pop1.svg";
 import { IoArrowUpCircle } from "react-icons/io5";
 import { IoArrowDownCircle } from "react-icons/io5";
 import { Button } from '@mui/material';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footers';
 import male_img from "@/assets/male.svg";
 import video_img from "@/assets/video_icon.svg"; 
+import Link from 'next/link';
 
 
 const page = () => {
@@ -16,7 +17,7 @@ const page = () => {
             <section className="discussion_section">
                 <div className="max-w-[1150px] 2xl:max-w-[1550px] mx-auto" style={{ padding: "0px 25px" }}>
                     <div style={{ paddingTop: "50px" }}>
-                        <Button variant="outlined" color="inherit" className="btnadd">Back</Button>
+                      <Link href={"/"}> <Button variant="outlined" color="inherit" className="btnadd">Back</Button></Link>
                     </div>
                     <div className="popular_dis_left_card_body card_active">
                         <div className="popular_dis_left_inner1">

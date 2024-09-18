@@ -12,7 +12,7 @@ import TopCost from '@/components/TopCost';
 import TabComponent from '@/components/TabComponent';
 import { imageseries, watchList } from '@/assets/data'
 import Movies from '@/components/Movies'
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footers'
 import Link from 'next/link'
 import { IoIosArrowBack } from 'react-icons/io'
 

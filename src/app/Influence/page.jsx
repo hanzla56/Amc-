@@ -22,7 +22,7 @@ import { IoArrowDownCircle } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentDots } from "react-icons/fa";
 import { Button } from '@mui/material';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footers';
 import { eventdata } from '@/assets/data';
 import { LuUpload } from "react-icons/lu";
 
@@ -305,7 +305,7 @@ const Influence = () => {
                 <div className="december_card_main">
                     <h1 className="movie_title">NOvember</h1>
                     <div className="show_more_btn">
-                        <Button variant="outlined" color="inherit" className="btnadd">Show more</Button>
+                        <Link href="/discussion"><Button variant="outlined" color="inherit" className="btnadd">Show more</Button></Link>
                     </div>
                 </div>
             </div>

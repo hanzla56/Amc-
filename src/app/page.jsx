@@ -8,7 +8,7 @@ import JustRelease from '@/components/JustRelease';
 import Popularoftheweek from '@/components/Popularoftheweek';
 import BigSlider from '@/components/BigSlider';
 import Movies from '@/components/Movies';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footers';
 import Reels from '@/components/Reels';
 
 export default function Home() {

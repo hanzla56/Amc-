@@ -14,7 +14,9 @@ const Signin = () => {
     <section className="accounts_section">
       <div className="accounts_inner_main">
         <div className="accounts_logo">
+          <Link href={"/"}>
           <img src={accounts_logo.src} alt="" />
+          </Link>
         </div>
         <div className="accounts_card_body_div">
           <div className="accounts_input">
@@ -37,12 +39,10 @@ const Signin = () => {
             <input type="checkbox" id='terms' />
             <label htmlFor="terms">I agree to our <Link href="#">Privacy Policy</Link> and <Link href="#">Term & Conditions</Link></label>
           </div>
-          <div className="accounts_btn">
-            <Button variant="contained" className="trailerbtn">Continue</Button>
-            <Button variant="outlined" color="inherit" className="btnadd">Back</Button>
-          </div>
+          <Button variant="contained" className="trailerbtn p-2">Continue</Button>
+          <Button variant="outlined" color="inherit" className="btnadd p-2 mt-2">Back</Button>
           <div className="accounts_last_txt">
-            <p>Already have an account?<Link href="#"> Login</Link></p>
+            <p>Already have an account?<Link href="/sign-in"> Login</Link></p>
           </div>
         </div>
         <div className="accounts_social_icons">

@@ -1,6 +1,6 @@
 "use client"
 import React,{useState} from "react";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footers";
 import Button from '@mui/material/Button'
 import avatar from "@/assets/Avatar.png"
 import Radio from '@mui/material/Radio';

@@ -31,9 +31,9 @@ const Influencer = () => {
           </div>
         </div>
       </div>
-      <div className="influence_bottom_buttons">
-        <Button variant="contained" className="trailerbtn">Continue</Button>
-        <Button variant="outlined" color="inherit" className="btnadd">Skip</Button>
+      <div className="w-full max-w-[400px] mx-auto py-10 flex flex-col gap-5">
+      <Link href="/Influence"><Button variant="contained" className="trailerbtn w-full p-2">Continue</Button></Link>
+        <Button variant="outlined" color="inherit" className="btnadd w-full p-2">Skip</Button>
       </div>
     </section>
   )

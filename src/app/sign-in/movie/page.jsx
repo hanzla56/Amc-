@@ -13,7 +13,7 @@ import TopCost from '@/components/TopCost';
 import TabComponent from '@/components/TabComponent';
 import { watchList } from '@/assets/data'
 import Movies from '@/components/Movies'
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footers'
 
 
 const OpenMovies = () => {
