@@ -1,5 +1,7 @@
 "use client";
 import { useState } from 'react'; 
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { StarIcons } from '@/assets/Icons';
@@ -9,6 +11,25 @@ const Movies = ({data,title,live}) => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(4);
+    const movies_slider = useMediaQuery('(max-width:576px)');
+    const movies_slider1 = useMediaQuery('(max-width:768px)');
+    const movies_slider2 = useMediaQuery('(max-width:992px)');
+    const movies_slider3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(movies_slider){
+            setCardsPerView(1.3);
+        } else if(movies_slider1){
+            setCardsPerView(2.3);
+        } else if(movies_slider2){ 
+            setCardsPerView(3.3);
+        } else if(movies_slider3){
+            setCardsPerView(4);
+        }
+        else{
+            setCardsPerView(4);
+        }
+    },[movies_slider, movies_slider1, movies_slider2, movies_slider3])
 
     const nextCard = () => { 
         if (currentIndex < data.length - cardsPerView) {
@@ -23,8 +44,8 @@ const Movies = ({data,title,live}) => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-5 pb-10">
-                <div className='text-[24px] font-bold my-5 flex items-center gap-2'>{title} 
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-5 pb-10 mange_container">
+                <div className='text-[24px] font-bold my-5 pt-5 flex items-center gap-2'>{title} 
                    {live && <div className='bg-[#FF0000] rounded-full p-1 w-fit h-fit'></div>}
                     </div>
 

@@ -1,5 +1,7 @@
 "use client";
 import { useState } from 'react';
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Hottopics, watchDAta } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,6 +12,25 @@ const HotMovieTopics = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(4);
+    const hot_movies = useMediaQuery('(max-width:576px)');
+    const hot_movies1 = useMediaQuery('(max-width:768px)');
+    const hot_movies2 = useMediaQuery('(max-width:992px)');
+    const hot_movies3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(hot_movies){
+            setCardsPerView(1);
+        } else if(hot_movies1){
+            setCardsPerView(2);
+        } else if(hot_movies2){ 
+            setCardsPerView(3);
+        } else if(hot_movies3){
+            setCardsPerView(4);
+        }
+        else{
+            setCardsPerView(4);
+        }
+    },[hot_movies, hot_movies1, hot_movies2, hot_movies3])
 
     const nextCard = () => {
         if (currentIndex < Hottopics.length - cardsPerView) {

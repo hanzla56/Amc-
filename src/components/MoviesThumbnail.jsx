@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { thumbnails, watchDAta } from '@/assets/data';
 import { Button } from '@mui/material';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
@@ -9,32 +11,53 @@ import { StarIcons } from '@/assets/Icons';
 
 
 const MoviesThumbnail = () => {
-
+    
 
     const [selectedGenreIndex, setSelectedGenreIndex] = useState(0);
-    const [cardsPerView] = useState(6);
+    const [cardsPerView, setCardsPerView] = useState(6);
+    const thumbnail = useMediaQuery('(max-width:576px)');
+    const thumbnail1 = useMediaQuery('(max-width:768px)');
+    const thumbnail2 = useMediaQuery('(max-width:992px)');
+    const thumbnail3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=> {
+        if(thumbnail){
+            setCardsPerView(2);
+        } else if(thumbnail1){
+            setCardsPerView(3);
+        } else if(thumbnail2){ 
+            setCardsPerView(4);
+        } else if(thumbnail3){
+            setCardsPerView(5);
+        }
+        else{
+            setCardsPerView(6);
+        }
+    },[thumbnail, thumbnail1, thumbnail2, thumbnail3])
+
     const handleNext = () => {
         if (selectedGenreIndex < thumbnails.length - cardsPerView) {
             setSelectedGenreIndex(selectedGenreIndex + 1);
         }
     };
+
     const handlePrev = () => {
         if (selectedGenreIndex > 0) {
             setSelectedGenreIndex(selectedGenreIndex - 1);}
     };
 
     return (
+
         <div className="h-[600px] img_slider relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto"
             style={{
                 background: `linear-gradient(180deg, #0D0C0F 0.08%, rgba(13, 12, 15, 0.0416667) 22.17%, rgba(13, 12, 15, 0.0976244) 58.89%, #0D0C0F 100%),
                 linear-gradient(82.22deg, rgba(13, 12, 15, 0.9) 36.24%, rgba(13, 12, 15, 0) 58.67%)
-                 ,url(${thumbnails[selectedGenreIndex].imageUrl})`
-            }}>
+                 ,url(${thumbnails[selectedGenreIndex].imageUrl})`}}>
 
 
-            <div className="relative z-10 text-white pt-5">
+            <div className="relative z-10 text-white pt-5 px-3">
                 <div className='bg-[#0000003D] px-2 py-1 rounded w-fit my-5'>Explore by the genre</div>
-                <h1 className="text-[48px] font-bold leading-[54px] max-w-[537px]">{thumbnails[selectedGenreIndex].title}</h1>
+                <h1 className="md:text-[48px] text-[32px] font-bold leading-[54px] max-w-[537px]">{thumbnails[selectedGenreIndex].title}</h1>
                 <p className="mt-4 text-[12px] flex items-center gap-1 my-2"><StarIcons /> 4.5 |  2h40m • 2022 • Superhero • Actions</p>
 
                 <div className="flex items-center gap-5 mt-5">
@@ -72,8 +95,7 @@ const MoviesThumbnail = () => {
 
 
                     <div className="overflow-hidden w-full mx-4">
-                        <div
-                            className=" flex transition-transform duration-500 w-full gap-4"
+                        <div className=" flex transition-transform duration-500 w-full gap-4"
                             style={{ transform: `translateX(-${selectedGenreIndex * (100 / cardsPerView)}%)` }}>
                             {thumbnails.map((genre, index) => (
                                 <div
@@ -104,6 +126,7 @@ const MoviesThumbnail = () => {
                 </div>
             </div>
         </div>
+        
     );
 };
 

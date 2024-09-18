@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { cardsData } from '@/assets/data';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { StarIcons } from '@/assets/Icons';
@@ -9,6 +11,25 @@ import { MdOutlineBookmarkBorder } from 'react-icons/md';
 const BigSlider = () => {
     const [selectedCardIndex, setSelectedCardIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(3);  
+    const big_slider = useMediaQuery('(max-width:576px)');
+    const big_slider1 = useMediaQuery('(max-width:768px)');
+    const big_slider2 = useMediaQuery('(max-width:992px)');
+    const big_slider3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(big_slider){
+            setCardsPerView(1.3);
+        } else if(big_slider1){
+            setCardsPerView(2.3);
+        } else if(big_slider2){ 
+            setCardsPerView(3.3);
+        } else if(big_slider3){
+            setCardsPerView(4);
+        }
+        else{
+            setCardsPerView(4);
+        }
+    },[big_slider, big_slider1, big_slider2, big_slider3])
 
     const handleNext = () => {
         if (selectedCardIndex < cardsData.length - cardsPerView) {
@@ -25,11 +46,11 @@ const BigSlider = () => {
     const selectedCard = cardsData[selectedCardIndex];
 
     return (
-        <div className="img_slider items-center min-h-screen grid grid-cols-2"
+        <div className="img_slider items-center min-h-screen flex flex-col-reverse sm:grid sm:grid-cols-2 gap-3"
             style={{ background: `linear-gradient(180deg, #0D0C0F 0.08%, rgba(13, 12, 15, 0.0416667) 22.17%, rgba(13, 12, 15, 0.0976244) 58.89%, #0D0C0F 100%),
                 linear-gradient(82.22deg, rgba(13, 12, 15, 0.9) 36.24%, rgba(13, 12, 15, 0) 58.67%),url(${selectedCard.imageUrl.src})` }}>
 
-            <div className="max-w-[537px] mx-auto ">
+            <div className="max-w-[537px] mx-auto mange_container">
                 <h1 className='text-[#F9F9F9] text-[32px] font-bold'>Featured in AMC Streams</h1>
                 <p className='text-[#F9F9F9] text-[20px] mt-1'>Best featured for you today</p>
                 <div className='bg-[#0000003D] px-2 py-1 my-2 rounded w-fit'>{selectedCard?.cuontry}</div>
@@ -45,9 +66,8 @@ const BigSlider = () => {
                   </Button>
                 </div>
             </div>
-
             {/* Right section with slider cards */}
-            <div className="flex overflow-hidden relative">
+            <div className="flex w-full overflow-hidden relative">
 
                 {/* Prev Button */}
                 <button

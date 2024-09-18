@@ -22,7 +22,7 @@ const WatchList = () => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10 mange_container">
                 <h1 className='text-[24px] font-bold my-5'>Your Watchlist</h1>
 
                 {/* Slider Container */}

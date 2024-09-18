@@ -1,5 +1,7 @@
 "use client";
 import { useState } from 'react';
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { profildata, Releasedata } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -7,7 +9,26 @@ import { IoIosArrowForward } from "react-icons/io";
 const TopCost = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView] = useState(6);
+    const [cardsPerView,setCardsPerView] = useState(6);
+    const topcast = useMediaQuery('(max-width:576px)');
+    const topcast1 = useMediaQuery('(max-width:768px)');
+    const topcast2 = useMediaQuery('(max-width:992px)');
+    const topcast3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(topcast){
+            setCardsPerView(1);
+        } else if(topcast1){
+            setCardsPerView(3);
+        } else if(topcast2){ 
+            setCardsPerView(4);
+        } else if(topcast3){
+            setCardsPerView(5);
+        }
+        else{
+            setCardsPerView(6);
+        }
+    },[topcast, topcast1, topcast2, topcast3])
 
     const nextCard = () => {
         if (currentIndex < profildata.length - cardsPerView) {
@@ -23,7 +44,7 @@ const TopCost = () => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mange_container">
                 <h1 className='text-[24px] font-bold my-10'>Top Cast</h1>
 
                 {/* Slider Container */}
@@ -35,7 +56,7 @@ const TopCost = () => {
                             transition: 'transform 0.4s ease-in-out',
                         }}>
                         {profildata.map((item, i) => (
-                            <div key={i} className='flex items-center gap-4'  style={{minWidth:`calc(94% / ${cardsPerView})`}}>
+                            <div key={i} className='flex items-center gap-4' style={{minWidth:`calc(94% / ${cardsPerView})`, justifyContent:"center"}}>
                                 <img src={item?.img.src} alt="image"  />
                                 <div>
                                     <h1 className='text-[16px] font-[600]'>{item?.title}</h1>

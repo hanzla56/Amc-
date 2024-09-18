@@ -113,6 +113,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .accounts_inner_main{
   width: 100%;
@@ -148,7 +149,6 @@ h6 {
 .accounts_logo img{
   margin: 0px auto 20px auto;
 }
- 
 .forgot_pass a{
   font-size: 16px;
   font-weight: 700;
@@ -156,7 +156,6 @@ h6 {
   letter-spacing: 0.005em;
   color: #fff;
 }
- 
 .accounts_last_txt{
   text-align: center;
   margin-top: 30px;
@@ -224,7 +223,6 @@ h6 {
   color: #fff;
   user-select: none;
 }
-
 /* Influencer_Style_Start ===============*/
 .influence_section{
   background: #08080A;
@@ -310,7 +308,6 @@ h6 {
   object-fit: contain;
 }
  
- 
 /* Subscription_Style_Start */
 
 .subscription_section{
@@ -320,8 +317,7 @@ h6 {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-} 
-
+}
 .subs_logo{
   text-align: center;
   padding-top: 20px;
@@ -334,13 +330,11 @@ h6 {
 .subs_title h3{
   font-size: 36px;
   font-weight: 600;
-  line-height: 22px;
   letter-spacing: 0.005em;
   text-align: left;
   color: #fff;
   margin-top:3rem;
 }
-
 .subscription_card_body{
   width: 100%; 
   background: #0D0C0F;
@@ -397,6 +391,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 .email_veri_inner{
   width: 100%;
@@ -862,6 +857,29 @@ h6 {
 .popular_dis_left_comments .popular_dis_left_inner1{
   margin-top: 30px;
 }
+.insta svg{
+  background: white;
+  width: 20px;
+  height: 20px;
+}
+.insta:hover svg{
+  background: red;
+}
+.footer_links a{
+  min-width: max-content;
+}
+.mobile_nav_section{
+  display: none;
+}
+.nav_mobile_logo{
+  margin: auto;
+  height: 35px;
+  width: auto;
+}
+.influence_Section{
+  background-color: #0D0C0F;
+  padding-top: 60px;
+}
 @media (max-width: 992px){
   .popular_dis_main{
     flex-direction: column;
@@ -876,8 +894,39 @@ h6 {
   .movie_premiere_event_main{
     width: 100%;
   }
+  .mange_container{
+    padding: 0px 15px;
+  }
+  .footer_links{
+    flex-wrap: wrap;
+  }
+  .mobile_nav_section{
+    display: block;
+  }
+  .web_nav{
+    display: none;
+  }
 }
 @media (max-width: 576px){
+  .logo_center{
+    margin: auto;
+  }
+  .influ_top_img .overlay_text h1 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    color: #F9F9F9;
+  }
+  .influence_bottom_text h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0.005em;
+    text-align: left;
+    color: #F9F9F9;
+  }
   .popular_dis_left_comments{
     padding-left: 20px;
   }
@@ -943,6 +992,25 @@ h6 {
   .movie_premiere_event_card_circle span {
     font-size: 17px;
   }
+  .accounts_section{
+    align-items: start;
+  }
+  .hero_text{
+    padding: 0px 15px;
+  }
+  .swiper-pagination-fraction,
+  .swiper-pagination-custom,
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 100% !important;
+    display: flex;
+    bottom: 0px !important;
+    padding-right: 0rem !important;
+    justify-content: center;
+  }
+  .hero_imgs{
+    min-height: 63vh !important;
+  }
 }
 @media (max-width: 380px){
   .popular_dis_right_card1 h1 {
@@ -960,11 +1028,3 @@ h6 {
 }
 
 
-.insta svg{
-background: white;
-width: 20px;
-height: 20px;
-}
-.insta:hover svg{
-  background: red;
-  }

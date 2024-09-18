@@ -8,7 +8,7 @@ import { IoPlayCircle } from "react-icons/io5";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
- 
+import Web_nav from "./web_nav";
 
 const Hero = ({herodata}) => {
 
@@ -19,13 +19,12 @@ const Hero = ({herodata}) => {
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         {herodata?.map((item, i) => (
           <SwiperSlide key={item.id || i}>
-            <div
-              className="min-h-screen relative bg-no-repeat bg-cover w-full h-full bg-center "
+            <div className="min-h-screen relative bg-no-repeat bg-cover w-full h-full bg-center hero_imgs"
               style={{
                 backgroundImage: `linear-gradient(358.93deg, #0D0C0F 0.83%, rgba(13, 12, 15, 0.85) 28.55%, rgba(13, 12, 15, 0) 48.81%, rgba(13, 12, 15, 0.284314) 70.66%, #0D0C0F 103.18%), url(${item?.img.src})`,}}>
-              <div
-                className="absolute bottom-10 2xl:bottom-20
-                             left-0 mx-auto right-0 z-10 max-w-[1150px] 2xl:max-w-[1550px]">
+              <div className="absolute bottom-10 2xl:bottom-20 left-0 mx-auto right-0 z-10 max-w-[1150px] 2xl:max-w-[1550px]">
+
+                <div className="hero_text">
                 <Button
                   variant="contained"
                   className="btnadd"
@@ -45,41 +44,14 @@ const Hero = ({herodata}) => {
                     <MdOutlineBookmarkBorder /> Add Watchlist
                   </Button>
                 </div>
+                </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="fixed top-5 left-0 right-0 z-50 w-full max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
-        <div className="flex items-center justify-between w-full">
-          <div>
-            <img src={logo.src} alt="logo" />
-          </div>
-          <div className="flex items-center gap-5">
-            <Link href="/">Home</Link>
-            <Link href="/discover">Discover</Link>
-            <Link href="/">AMC Kids</Link>
-            <Link href="/becom-Influencer">Influence</Link>
-            <Link href="/">Español</Link>
-          </div>
-          <div className="flex items-center gap-5">
-           <Link href="/sign-up">
-           <Button   variant="outlined" color="inherit" className="btnadd">
-              Sign up
-            </Button>
-           </Link>
-           <Link href="/sign-in">
-            <Button
-             
-              variant="contained"
-              className="trailerbtn">
-              Login
-            </Button></Link>
-            
-          </div>
-        </div>
-      </div>
+      <Web_nav/>
      
 
     </>

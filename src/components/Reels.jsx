@@ -1,5 +1,7 @@
  "use client";
 import { useState } from 'react';
+import { useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Reelsdata } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -7,6 +9,25 @@ import { IoIosArrowForward } from "react-icons/io";
 const Reels = ({title}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(4);
+    const reels_slider = useMediaQuery('(max-width:576px)');
+    const reels_slider1 = useMediaQuery('(max-width:768px)');
+    const reels_slider2 = useMediaQuery('(max-width:992px)');
+    const reels_slider3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(reels_slider){
+            setCardsPerView(1.3);
+        } else if(reels_slider1){
+            setCardsPerView(2.3);
+        } else if(reels_slider2){ 
+            setCardsPerView(3.3);
+        } else if(reels_slider3){
+            setCardsPerView(4);
+        }
+        else{
+            setCardsPerView(4);
+        }
+    },[reels_slider, reels_slider1, reels_slider2, reels_slider3])
 
     const nextCard = () => {
         if (currentIndex < Reelsdata.length - cardsPerView) {
@@ -22,19 +43,19 @@ const Reels = ({title}) => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto py-10 mange_container">
                 <h1 className='text-[24px] font-bold my-5'>{title}</h1>
 
                 {/* Slider Container */}
                 <div className="slider-container overflow-hidden">
                     <div
-                        className={`flex w-full gap-[10rem]`}
+                        className={`flex w-full gap-4`}
                         style={{
                             transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
                             transition: 'transform 0.4s ease-in-out',
                         }}>
                         {Reelsdata.map((item, i) => (
-                            <div key={i} className='' style={{minWidth:`calc(65% / ${cardsPerView})`}}>
+                            <div key={i} className='' style={{minWidth:`calc(93% / ${cardsPerView})`}}>
                                 <img src={item?.img.src} alt="image" className='w-full h-[256px] object-cover' />
                                 <div>
                                     <h1 className='text-[16px font-bold] my-1'>{item?.title}</h1>
