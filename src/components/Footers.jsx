@@ -12,14 +12,13 @@ const Footer = () => {
 
     return (
         <>
-            <footer className="border-t border-[#FFFFFF1A]">
+            <footer className="border-t border-[#FFFFFF1A] mange_container">
                 <div className="max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
-
-                    <div className="grid grid-cols-2 gap-5 pt-10">
-                        <h1 className="text-[40px] leading-[48px] font-semibold max-w-[500px]">
+                    <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5 pt-10">
+                        <h1 className="sm:text-[40px] md:text-[40px] md:leading-[48px] font-semibold max-w-[500px]">
                             Our platform is trusted by millions & features best updated movies all around the world.
                         </h1>
-                        <div className="flex items-center justify-end gap-4 h-fit">
+                        <div className="flex items-center sm:justify-end gap-4 h-fit footer_links">
                             <Link underline="hover" className="text-white h-fit" href="/">Home</Link>/
                             <Link underline="hover" className="text-white h-fit" href="/discover">Discover</Link>/
                             <Link underline="hover" className="text-white h-fit" href="/amc-kids">AMC Kids</Link>/
@@ -28,7 +27,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <Grid container sx={{ justifyContent: "space-between", alignItems: 'center', p: '20px 0px' }}>
+                    <Grid container sx={{ justifyContent: "space-between", alignItems: 'center', p: '20px 0px' ,gap:'15px'}}>
                         <Grid item sm={12} md={6}>
                             <Grid container spacing={2} sx={{ justifyContent: "left" }}>
                                 <Grid item>

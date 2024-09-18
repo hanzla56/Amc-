@@ -1,5 +1,6 @@
 "use client";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { dataweek, watchDAta } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,6 +11,25 @@ const Popularoftheweek = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(4);
+    const pop_weeks = useMediaQuery('(max-width:576px)');
+    const pop_weeks1 = useMediaQuery('(max-width:768px)');
+    const pop_weeks2 = useMediaQuery('(max-width:992px)');
+    const pop_weeks3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(pop_weeks){
+            setCardsPerView(1.3);
+        } else if(pop_weeks1){
+            setCardsPerView(2.3);
+        } else if(pop_weeks2){ 
+            setCardsPerView(3.3);
+        } else if(pop_weeks3){
+            setCardsPerView(4);
+        }
+        else{
+            setCardsPerView(4);
+        }
+    },[pop_weeks, pop_weeks1, pop_weeks2, pop_weeks3])
 
     const nextCard = () => {
         if (currentIndex < watchDAta.length - cardsPerView) {
@@ -24,7 +44,7 @@ const Popularoftheweek = () => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-5 pb-10">
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto mt-5 pb-10 mange_container">
                 <h1 className='text-[24px] font-bold my-5'>Popular of the week</h1>
 
                 {/* Slider Container */}
@@ -41,7 +61,7 @@ const Popularoftheweek = () => {
                                     <img src={item?.img.src} alt="image" className='min-w-[107px]'/>
                                 </div>
                                <div className='flex items-center gap-8 w-full justify-between h-full pr-2'>
-                               <div className='flex flex-col justify-between gap-3'>
+                               <div className='flex flex-col justify-between gap-2'>
                                     <p className='border-[#28262D] px-2 py-1 rounded border-[1px] w-fit text-[12px]'>PG-13</p>
                                     <h1 className='text-[16px] font-bold'>{item?.title}</h1>
                                     <div className='flex items-center text-[#78828A] text-[12px] gap-1'>

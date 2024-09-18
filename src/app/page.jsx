@@ -10,6 +10,7 @@ import BigSlider from '@/components/BigSlider';
 import Movies from '@/components/Movies';
 import Footer from '@/components/Footers';
 import Reels from '@/components/Reels';
+import Navbar from '@/components/Mobile_nav';
 
 export default function Home() {
 
@@ -32,8 +33,9 @@ export default function Home() {
 
   return (
     <>
+    <Navbar/>
       <Hero  herodata={herodata1}/>
-        <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
+        <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10 mange_container">
         {/* Slider Container */}
         <div className="slider-container">
           <div 

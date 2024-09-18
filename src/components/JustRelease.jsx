@@ -1,12 +1,35 @@
 "use client";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { Releasedata } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import Navbar from '@/components/Mobile_nav';
+
 
 const JustRelease = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(5);
+    const matches = useMediaQuery('(max-width:576px)');
+    const matches1 = useMediaQuery('(max-width:768px)');
+    const matches2 = useMediaQuery('(max-width:992px)');
+    const matches3 = useMediaQuery('(max-width:1150px)');
+
+    useEffect(()=>{
+        if(matches){
+            setCardsPerView(1.5);
+        } else if(matches1){
+            setCardsPerView(2.5);
+        } else if(matches2){ 
+            setCardsPerView(3.5);
+        } else if(matches3){
+            setCardsPerView(4.5);
+        }
+        else{
+            setCardsPerView(5);
+        }
+    },[matches, matches1, matches2, matches3])
+
 
     const nextCard = () => {
         if (currentIndex < Releasedata.length - cardsPerView) {
@@ -22,13 +45,12 @@ const JustRelease = () => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
+            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10 mange_container">
                 <h1 className='text-[24px] font-bold my-5'>Just Release</h1>
 
                 {/* Slider Container */}
                 <div className="slider-container overflow-hidden">
-                    <div
-                        className={`flex w-full gap-6`}
+                    <div className={`flex w-full gap-6`}
                         style={{
                             transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
                             transition: 'transform 0.4s ease-in-out',
@@ -45,8 +67,7 @@ const JustRelease = () => {
                 {currentIndex > 0 && (
                   <div className='absolute left-0 w-[160px] top-10 bottom-0 flex items-center'
                   style={{background: "linear-gradient(90deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}> 
-                      <button
-                        className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
+                      <button className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
                         onClick={prevCard}>
                         <IoIosArrowBack />
                     </button>
@@ -57,8 +78,7 @@ const JustRelease = () => {
                 {currentIndex < Releasedata.length - cardsPerView && (
                   <div  className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
                   style={{background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}>
-                      <button
-                        className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
+                      <button className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
                         onClick={nextCard}>
                         <IoIosArrowForward />
                     </button>

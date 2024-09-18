@@ -33,7 +33,7 @@ const Discover = () => {
   return (
     <div>
         <Hero herodata={herodata2}/>
-        <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10">
+        <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto my-10 mange_container">
         {/* Slider Container */}
         <div className="slider-container">
           <div 
