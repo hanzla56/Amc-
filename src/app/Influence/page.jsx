@@ -1,6 +1,4 @@
 "use client";
-
-
 import React, { useState } from 'react';
 import imginf from "@/assets/inf.png";
 import logo from "@/assets/logo.png";
@@ -10,10 +8,8 @@ import pop3_img from "@/assets/pop3.svg";
 import pop4_img from "@/assets/pop4.svg";
 import male_img from "@/assets/male.svg";
 import male2_img from "@/assets/male2.svg";
-import video_img from "@/assets/video_icon.svg";
 import edit_img from "@/assets/edit.svg";
 import badge_img from "@/assets/badge.svg";
-// import { Button } from '@nextui-org/react'
 import Link from 'next/link';
 import Reels from '@/components/Reels';
 import HotMovieTopics from '@/components/HotMovieTopics';
@@ -27,6 +23,7 @@ import { eventdata } from '@/assets/data';
 import { LuUpload } from "react-icons/lu";
 import Navbar from '@/components/Mobile_nav';
 import Web_nav from '@/components/Web_nav';
+import { VideoIcons } from '@/assets/Icons';
 
 
 const Influence = () => {
@@ -55,9 +52,11 @@ const Influence = () => {
                         <h1 className="pop_title">⭐ Popular Discussion</h1>
                         <div className="popular_dis_input_main">
                             <img src={male_img.src} className='male_img' alt="..." />
-                            <div className="popular_dis_input_div">
+                            <div className="popular_dis_input_div relative" >
                                 <input type="text" placeholder='Add Discussion title' />
-                                <img src={video_img.src} alt="" />
+                                <div className='absolute right-3 top-3 '>
+                                <VideoIcons/>
+                                </div>
                             </div>
                             <Button variant="contained" className="trailerbtn">Post</Button>
                         </div>

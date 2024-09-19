@@ -1,7 +1,7 @@
 "use client";
 import { useState,useEffect } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { dataweek, watchDAta } from "@/assets/data";
+import { dataweek } from "@/assets/data";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { MovieIcons, StarIcons } from '@/assets/Icons';
@@ -21,9 +21,7 @@ const Popularoftheweek = () => {
             setCardsPerView(1.3);
         } else if(pop_weeks1){
             setCardsPerView(2);
-        } else if(pop_weeks2){ 
-            setCardsPerView(3);
-        }  
+        } 
     },[pop_weeks, pop_weeks1, pop_weeks2])
 
     const nextCard = () => {

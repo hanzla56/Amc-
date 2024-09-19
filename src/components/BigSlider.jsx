@@ -14,7 +14,7 @@ const BigSlider = () => {
     const big_slider = useMediaQuery('(max-width:576px)');
     const big_slider1 = useMediaQuery('(max-width:768px)');
     const big_slider2 = useMediaQuery('(max-width:992px)');
-    const big_slider3 = useMediaQuery('(max-width:1150px)');
+    const big_slider3 = useMediaQuery('(max-width:1250px)');
 
     useEffect(()=>{
         if(big_slider){
@@ -22,12 +22,7 @@ const BigSlider = () => {
         } else if(big_slider1){
             setCardsPerView(2.3);
         } else if(big_slider2){ 
-            setCardsPerView(3.3);
-        } else if(big_slider3){
-            setCardsPerView(4);
-        }
-        else{
-            setCardsPerView(4);
+            setCardsPerView(3);
         }
     },[big_slider, big_slider1, big_slider2, big_slider3])
 
