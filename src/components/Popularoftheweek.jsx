@@ -10,7 +10,7 @@ const Popularoftheweek = () => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(4);
+    const [cardsPerView, setCardsPerView] = useState(3);
     const pop_weeks = useMediaQuery('(max-width:576px)');
     const pop_weeks1 = useMediaQuery('(max-width:768px)');
     const pop_weeks2 = useMediaQuery('(max-width:992px)');
@@ -20,19 +20,14 @@ const Popularoftheweek = () => {
         if(pop_weeks){
             setCardsPerView(1.3);
         } else if(pop_weeks1){
-            setCardsPerView(2.3);
+            setCardsPerView(2);
         } else if(pop_weeks2){ 
-            setCardsPerView(3.3);
-        } else if(pop_weeks3){
-            setCardsPerView(4);
-        }
-        else{
-            setCardsPerView(4);
-        }
-    },[pop_weeks, pop_weeks1, pop_weeks2, pop_weeks3])
+            setCardsPerView(3);
+        }  
+    },[pop_weeks, pop_weeks1, pop_weeks2])
 
     const nextCard = () => {
-        if (currentIndex < watchDAta.length - cardsPerView) {
+        if (currentIndex < dataweek.length - cardsPerView) {
             setCurrentIndex(currentIndex + 1);
         }
     };
@@ -90,7 +85,7 @@ const Popularoftheweek = () => {
                 )}
 
                 {/* Next Button */}
-                {currentIndex < watchDAta.length - cardsPerView && (
+                {currentIndex < dataweek.length - cardsPerView && (
                     <div className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
                         style={{ background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)" }}>
                         <button
