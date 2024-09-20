@@ -1,6 +1,7 @@
 "use client"
 import React,{useState} from 'react'
-import { franchiesdata, herodata1, herodata2, Livedata, moviesdata, Seriesdata, Streamdata } from '@/assets/data'
+import { franchiesdata, herodata1, herodata2, Livedata,
+   moviesdata, Seriesdata, Streamdata } from '@/assets/data'
 import Hero from '@/components/Hero'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import JustRelease from '@/components/JustRelease'

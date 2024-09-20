@@ -17,20 +17,20 @@ const HotMovieTopics = () => {
     const hot_movies2 = useMediaQuery('(max-width:992px)');
     const hot_movies3 = useMediaQuery('(max-width:1150px)');
 
-    useEffect(()=>{
-        if(hot_movies){
-            setCardsPerView(1);
-        } else if(hot_movies1){
-            setCardsPerView(2);
-        } else if(hot_movies2){ 
-            setCardsPerView(3);
-        } else if(hot_movies3){
-            setCardsPerView(4);
-        }
-        else{
-            setCardsPerView(4);
-        }
-    },[hot_movies, hot_movies1, hot_movies2, hot_movies3])
+    // useEffect(()=>{
+    //     if(hot_movies){
+    //         setCardsPerView(1);
+    //     } else if(hot_movies1){
+    //         setCardsPerView(2);
+    //     } else if(hot_movies2){ 
+    //         setCardsPerView(3);
+    //     } else if(hot_movies3){
+    //         setCardsPerView(4);
+    //     }
+    //     else{
+    //         setCardsPerView(4);
+    //     }
+    // },[hot_movies, hot_movies1, hot_movies2, hot_movies3])
 
     const nextCard = () => {
         if (currentIndex < Hottopics.length - cardsPerView) {

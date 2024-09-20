@@ -17,14 +17,10 @@ const BigSlider = () => {
     const big_slider3 = useMediaQuery('(max-width:1250px)');
 
     useEffect(()=>{
-        if(big_slider){
-            setCardsPerView(1.3);
-        } else if(big_slider1){
-            setCardsPerView(2.3);
-        } else if(big_slider2){ 
-            setCardsPerView(3);
+        if(big_slider3){
+            setCardsPerView(2);
         }
-    },[big_slider, big_slider1, big_slider2, big_slider3])
+    },[big_slider3])
 
     const handleNext = () => {
         if (selectedCardIndex < cardsData.length - cardsPerView) {
@@ -95,7 +91,7 @@ const BigSlider = () => {
                 {/* Next Button */}
                 <button
                     onClick={handleNext}
-                    className={` absolute  top-0 bottom-0 right-0 flex w-[160px] justify-end items-center transition-all duration-300 `}
+                    className={` absolute  top-0 bottom-0 right-0 flex w-[160px] justify-start items-center transition-all duration-300 `}
                     
                     style={{background:' linear-gradient(270deg, #0D0C0F 6.29%, rgba(13, 12, 15, 0.9) 35.62%, rgba(13, 12, 15, 0.74) 51.06%, rgba(13, 12, 15, 0) 105.09%, #0D0C0F 105.09%)'
                     }}>

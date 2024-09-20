@@ -10,19 +10,18 @@ const Popularoftheweek = () => {
 
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [cardsPerView, setCardsPerView] = useState(3);
-    const pop_weeks = useMediaQuery('(max-width:576px)');
+    const [cardsPerView, setCardsPerView] = useState(4);
+    const pop_weeks = useMediaQuery('(max-width:1250px)');
     const pop_weeks1 = useMediaQuery('(max-width:768px)');
     const pop_weeks2 = useMediaQuery('(max-width:992px)');
-    const pop_weeks3 = useMediaQuery('(max-width:1150px)');
+    const pop_weeks3 = useMediaQuery('(max-width:1250px)');
 
     useEffect(()=>{
         if(pop_weeks){
-            setCardsPerView(1.3);
-        } else if(pop_weeks1){
-            setCardsPerView(2);
+            setCardsPerView(3);
         } 
-    },[pop_weeks, pop_weeks1, pop_weeks2])
+    
+    },[pop_weeks])
 
     const nextCard = () => {
         if (currentIndex < dataweek.length - cardsPerView) {

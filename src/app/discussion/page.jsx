@@ -6,9 +6,9 @@ import { IoArrowUpCircle } from "react-icons/io5";
 import { IoArrowDownCircle } from "react-icons/io5";
 import { Button } from '@mui/material';
 import Footer from '@/components/Footers';
-import male_img from "@/assets/male.svg";
-import video_img from "@/assets/video_icon.svg"; 
+import male_img from "@/assets/male.svg"; 
 import Link from 'next/link';
+import { VideoIcons } from '@/assets/Icons';
 
 
 const page = () => {
@@ -175,9 +175,11 @@ const page = () => {
                     </div>
                     <div className="popular_dis_input_main">
                             <img src={male_img.src} className='male_img' alt="..." />
-                            <div className="popular_dis_input_div">
+                            <div className="popular_dis_input_div relative">
                                 <input type="text" placeholder='Add Discussion title' />
-                                <img src={video_img.src} alt="" />
+                                <div className='absolute right-3 top-3 '>
+                                        <VideoIcons />
+                                    </div>
                             </div>
                             <Button variant="contained" className="trailerbtn">Post</Button>
                         </div>

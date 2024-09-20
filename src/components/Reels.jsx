@@ -14,20 +14,15 @@ const Reels = ({title}) => {
     const reels_slider2 = useMediaQuery('(max-width:992px)');
     const reels_slider3 = useMediaQuery('(max-width:1150px)');
 
-    useEffect(()=>{
-        if(reels_slider){
-            setCardsPerView(1.3);
-        } else if(reels_slider1){
-            setCardsPerView(2.3);
-        } else if(reels_slider2){ 
-            setCardsPerView(3.3);
-        } else if(reels_slider3){
-            setCardsPerView(4);
-        }
-        else{
-            setCardsPerView(4);
-        }
-    },[reels_slider, reels_slider1, reels_slider2, reels_slider3])
+    // useEffect(()=>{
+    //     if(reels_slider){
+    //         setCardsPerView(1.3);
+    //     } else if(reels_slider1){
+    //         setCardsPerView(2.3);
+    //     } else if(reels_slider2){ 
+    //         setCardsPerView(3);
+    //     }  
+    // },[reels_slider, reels_slider1, reels_slider2, reels_slider3])
 
     const nextCard = () => {
         if (currentIndex < Reelsdata.length - cardsPerView) {
@@ -43,11 +38,33 @@ const Reels = ({title}) => {
 
     return (
         <>
-            <div className="relative max-w-[1150px] 2xl:max-w-[1550px] mx-auto py-10 mange_container">
+            <div className=" max-w-[1150px] 2xl:max-w-[1550px] mx-auto py-10 mange_container">
                 <h1 className='text-[24px] font-bold my-5'>{title}</h1>
 
                 {/* Slider Container */}
-                <div className="slider-container overflow-hidden">
+                <div className="slider-container overflow-hidden relative">
+                {currentIndex > 0 && (
+                  <div className='absolute left-0 w-[160px] -top-2 z-10 bottom-0 flex items-center'
+                  style={{background: "linear-gradient(90deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}> 
+                      <button
+                        className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
+                        onClick={prevCard}>
+                        <IoIosArrowBack />
+                    </button>
+                  </div>
+                )}
+
+                {/* Next Button */}
+                {currentIndex < Reelsdata.length - cardsPerView && (
+                  <div  className='absolute right-0 -top-2 z-10 bottom-0 w-[160px] flex items-center justify-end'
+                  style={{background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}>
+                      <button
+                        className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
+                        onClick={nextCard}>
+                        <IoIosArrowForward />
+                    </button>
+                  </div>
+                )}
                     <div
                         className={`flex w-full gap-4`}
                         style={{
@@ -66,29 +83,8 @@ const Reels = ({title}) => {
                     </div>
                 </div>
 
-                {/* Previous Button */}
-                {currentIndex > 0 && (
-                  <div className='absolute left-0 w-[160px] top-10 bottom-0 flex items-center'
-                  style={{background: "linear-gradient(90deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}> 
-                      <button
-                        className="transform -translate-y-1/2 bg-[#28262D] text-white hover:bg-[#D71134] p-2 rounded-full"
-                        onClick={prevCard}>
-                        <IoIosArrowBack />
-                    </button>
-                  </div>
-                )}
-
-                {/* Next Button */}
-                {currentIndex < Reelsdata.length - cardsPerView && (
-                  <div  className='absolute right-0 top-10 bottom-0 w-[160px] flex items-center justify-end'
-                  style={{background: "linear-gradient(269.96deg, #0D0C0F 18.88%, rgba(13, 12, 15, 0) 99.97%, #0D0C0F 99.97%)"}}>
-                      <button
-                        className="transform -translate-y-1/2 bg-[#28262D] hover:bg-[#D71134] text-white p-2 rounded-full"
-                        onClick={nextCard}>
-                        <IoIosArrowForward />
-                    </button>
-                  </div>
-                )}
+           
+              
             </div>
         </>
     );

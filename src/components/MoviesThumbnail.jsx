@@ -15,25 +15,17 @@ const MoviesThumbnail = () => {
 
     const [selectedGenreIndex, setSelectedGenreIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(6);
-    const thumbnail = useMediaQuery('(max-width:576px)');
+    const thumbnail = useMediaQuery('(max-width:1250px)');
     const thumbnail1 = useMediaQuery('(max-width:768px)');
     const thumbnail2 = useMediaQuery('(max-width:992px)');
-    const thumbnail3 = useMediaQuery('(max-width:1150px)');
+    const thumbnail3 = useMediaQuery('(max-width:1250px)');
 
     useEffect(()=> {
-        if(thumbnail){
-            setCardsPerView(2);
-        } else if(thumbnail1){
-            setCardsPerView(3);
-        } else if(thumbnail2){ 
+        if(thumbnail3){
             setCardsPerView(4);
-        } else if(thumbnail3){
-            setCardsPerView(5);
-        }
-        else{
-            setCardsPerView(6);
-        }
-    },[thumbnail, thumbnail1, thumbnail2, thumbnail3])
+        } 
+       
+    },[thumbnail3])
 
     const handleNext = () => {
         if (selectedGenreIndex < thumbnails.length - cardsPerView) {

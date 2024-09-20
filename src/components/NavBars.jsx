@@ -3,15 +3,17 @@ import Link from "next/link";
 import Button from "@mui/material/Button";
 import logo from "@/assets/logo.png";
 
-const Web_nav = () => {
+
+const NavBars = () => {
+
     return (
         <section className="webnav_section web_nav">
-            <div className="fixed top-5 left-0 right-0 z-50 w-full max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
+            <div className=" absolute top-5 left-0 right-0 z-50 w-full max-w-[1150px] 2xl:max-w-[1550px] mx-auto">
                 <div className="flex items-center justify-between w-full">
                     <div>
                         <img src={logo.src} alt="logo" />
                     </div>
-                    <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-5 max-w-[537px] w-full justify-between">
                         <Link href="/">Home</Link>
                         <Link href="/discover">Discover</Link>
                         <Link href="/">AMC Kids</Link>
@@ -39,4 +41,4 @@ const Web_nav = () => {
     )
 }
 
-export default Web_nav
+export default NavBars

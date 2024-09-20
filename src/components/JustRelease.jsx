@@ -10,25 +10,16 @@ import Navbar from '@/components/Mobile_nav';
 const JustRelease = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsPerView, setCardsPerView] = useState(5);
-    const matches = useMediaQuery('(max-width:576px)');
+    const matches = useMediaQuery('(max-width:1250px)');
     const matches1 = useMediaQuery('(max-width:768px)');
     const matches2 = useMediaQuery('(max-width:992px)');
     const matches3 = useMediaQuery('(max-width:1150px)');
 
     useEffect(()=>{
-        if(matches){
-            setCardsPerView(1.5);
-        } else if(matches1){
-            setCardsPerView(2.5);
-        } else if(matches2){ 
-            setCardsPerView(3.5);
-        } else if(matches3){
-            setCardsPerView(4.5);
-        }
-        else{
-            setCardsPerView(5);
-        }
-    },[matches, matches1, matches2, matches3])
+       if(matches){
+        setCardsPerView(4)
+       }
+    },[matches])
 
 
     const nextCard = () => {

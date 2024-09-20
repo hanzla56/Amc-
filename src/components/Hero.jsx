@@ -8,7 +8,7 @@ import { IoPlayCircle } from "react-icons/io5";
 import { MdOutlineBookmarkBorder } from "react-icons/md";
 import logo from "@/assets/logo.png";
 import Link from "next/link";
-import Web_nav from "./web_nav";
+import NavBars from "./NavBars";
 
 const Hero = ({herodata}) => {
 
@@ -51,7 +51,7 @@ const Hero = ({herodata}) => {
         ))}
       </Swiper>
 
-      <Web_nav/>
+      <NavBars/>
      
 
     </>

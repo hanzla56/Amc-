@@ -14,20 +14,7 @@ const Watching = ({data}) => {
     const reels_slider2 = useMediaQuery('(max-width:992px)');
     const reels_slider3 = useMediaQuery('(max-width:1150px)');
 
-    useEffect(()=>{
-        if(reels_slider){
-            setCardsPerView(1);
-        } else if(reels_slider1){
-            setCardsPerView(3);
-        } else if(reels_slider2){ 
-            setCardsPerView(4);
-        } else if(reels_slider3){
-            setCardsPerView(5);
-        }
-        else{
-            setCardsPerView(6);
-        }
-    },[reels_slider, reels_slider1, reels_slider2, reels_slider3])
+  
 
     const nextCard = () => {
         if (currentIndex < data.length - cardsPerView) {
