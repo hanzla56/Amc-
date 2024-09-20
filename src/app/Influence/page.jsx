@@ -24,6 +24,7 @@ import Navbar from '@/components/Mobile_nav';
 import NavBars from '@/components/NavBars';
 import { VideoIcons } from '@/assets/Icons';
  
+import Image from 'next/image';
 
 
 const Influence = () => {
@@ -58,7 +59,7 @@ const Influence = () => {
                         <div className="popular_dis_left_main">
                             <h1 className="pop_title">⭐ Popular Discussion</h1>
                             <div className="popular_dis_input_main">
-                                <img src={male_img.src} className='male_img' alt="..." />
+                                <Image src={male_img.src} className='male_img' alt="..." width={30} height={150}  />
                                 <div className="popular_dis_input_div relative" >
                                     <input type="text" placeholder='Add Discussion title' />
                                     <div className='absolute right-3 top-3 '>
@@ -77,7 +78,7 @@ const Influence = () => {
                                     <div className="popular_dis_left_card_text_main">
                                         <div className="popular_dis_left_card_text1">
                                             <h2>Do you agree the Spiderman 3 is the worst movie? Why?</h2>
-                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</p>
+                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</p>
                                         </div>
                                         <div className="popular_dis_left_card_text_bottom">
                                             <div className="popular_dis_left_card_bottom_txt1">
@@ -99,7 +100,7 @@ const Influence = () => {
                                     </div>
                                 </div>
                                 <div className="popular_card1_right_img">
-                                    <img src={pop1_img.src} alt="" />
+                                    <Image src={pop1_img.src} alt="" height={150} width={30}/>
                                 </div>
                             </div>
                             <div className="popular_dis_left_card_body">
@@ -112,7 +113,8 @@ const Influence = () => {
                                     <div className="popular_dis_left_card_text_main">
                                         <div className="popular_dis_left_card_text1">
                                             <h2>Spiderman; Into The Spiderverse second movie?</h2>
-                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</p>
+                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</p>
+
                                         </div>
                                         <div className="popular_dis_left_card_text_bottom">
                                             <div className="popular_dis_left_card_bottom_txt1">
@@ -134,7 +136,7 @@ const Influence = () => {
                                     </div>
                                 </div>
                                 <div className="popular_card1_right_img">
-                                    <img src={pop2_img.src} alt="" />
+                                    <Image src={pop2_img.src} alt="" height={150} width={30} />
                                 </div>
                             </div>
                             <div className="popular_dis_left_card_body">
@@ -147,7 +149,7 @@ const Influence = () => {
                                     <div className="popular_dis_left_card_text_main">
                                         <div className="popular_dis_left_card_text1">
                                             <h2>Top Gun is propaganda for the Movie World?</h2>
-                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</p>
+                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</p>
                                         </div>
                                         <div className="popular_dis_left_card_text_bottom">
                                             <div className="popular_dis_left_card_bottom_txt1">
@@ -169,7 +171,7 @@ const Influence = () => {
                                     </div>
                                 </div>
                                 <div className="popular_card1_right_img">
-                                    <img src={pop3_img.src} alt="" />
+                                    <Image src={pop3_img.src} alt="" width={30} height={150} />
                                 </div>
                             </div>
                             <div className="popular_dis_left_card_body">
@@ -182,7 +184,7 @@ const Influence = () => {
                                     <div className="popular_dis_left_card_text_main">
                                         <div className="popular_dis_left_card_text1">
                                             <h2>Jason Statham injuries in the Mechanic Movie is real?</h2>
-                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</p>
+                                            <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</p>
                                         </div>
                                         <div className="popular_dis_left_card_text_bottom">
                                             <div className="popular_dis_left_card_bottom_txt1">
@@ -204,7 +206,7 @@ const Influence = () => {
                                     </div>
                                 </div>
                                 <div className="popular_card1_right_img">
-                                    <img src={pop4_img.src} alt="" />
+                                    <Image src={pop4_img.src} alt="" width={30} height={150}  />
                                 </div>
                             </div>
                             <div className="show_more_btn">
@@ -221,11 +223,11 @@ const Influence = () => {
                             <div className="popular_dis_right_profile_card">
                                 <div className="popular_dis_right_profile_title">
                                     <h5>Profile</h5>
-                                    <span><img src={edit_img.src} alt="" /> Edit</span>
+                                    <span><Image src={edit_img.src} alt="" width={30} height={150}  /> Edit</span>
                                 </div>
                                 <div className="profile_card_top1">
                                     <div className="profile_card_top1_img">
-                                        <img src={male2_img.src} alt="" />
+                                        <Image src={male2_img.src} alt="" width={30} height={150}  />
                                     </div>
                                     <div className="profile_card_top1_txt">
                                         <h2>24</h2>
@@ -239,7 +241,7 @@ const Influence = () => {
                                 <div className="profile_card_discrip">
                                     <h2>Irvan Wibowo</h2>
                                     <p>Action Movie Expert, I love action films.</p>
-                                    <img src={badge_img.src} alt="" />
+                                    <Image src={badge_img.src} alt="" width={30} height={150} />
                                     <div style={{ textAlign: "center" }}>
                                         <Button> <LuUpload /> Upload Video</Button>
                                     </div>
@@ -258,7 +260,7 @@ const Influence = () => {
                                 </div>
                                 <div className="movie_premiere_event_card_right">
                                     <div className="movie_premiere_event_card_profile">
-                                        <img src={item.img.src} alt="" />
+                                        <Image src={item.img.src} alt="" width={30} height={150} />
                                         <div>
                                             <h1>{item.title}</h1>
                                             <p>Season 1 Episode 3: Part One</p>

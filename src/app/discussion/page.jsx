@@ -11,6 +11,8 @@ import Link from 'next/link';
 import { VideoIcons } from '@/assets/Icons';
 
 
+import Image from 'next/image';
+
 const page = () => {
     return (
         <>
@@ -29,7 +31,7 @@ const page = () => {
                             <div className="popular_dis_left_card_text_main">
                                 <div className="popular_dis_left_card_text1">
                                     <h2>Do you agree the Spiderman 3 is the worst movie? Why?</h2>
-                                    <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</p>
+                                    <p>Ahmad Movi lives with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</p>
                                 </div>
                                 <div className="popular_dis_left_card_text_bottom">
                                     <div className="popular_dis_left_card_bottom_txt1">
@@ -64,7 +66,7 @@ const page = () => {
                             </div>
                             <div className="popular_dis_left_card_text_main">
                                 <div className="popular_dis_left_card_text1">
-                                    <h2>I think with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na'vi race to protect their planet...Jake must work with Neytiri and the army of the Na'vi race to protect their planet. ...</h2>
+                                    <h2>I think with his newfound family formed on the planet of Pandora. Once a familiar threat returns to finish. Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet...Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet. ...</h2>
                                 </div>
                                 <div className="popular_dis_left_card_text_bottom">
                                     <div className="popular_dis_left_card_bottom_txt1">
@@ -93,7 +95,7 @@ const page = () => {
                             </div>
                             <div className="popular_dis_left_card_text_main">
                                 <div className="popular_dis_left_card_text1">
-                                    <h2>And Jake must work with Neytiri and the army of the Na'vi race to protect their planet</h2>
+                                    <h2>And Jake must work with Neytiri and the army of the Na&apos;vi race to protect their planet</h2>
                                 </div>
                                 <div className="popular_dis_left_card_text_bottom">
                                     <div className="popular_dis_left_card_bottom_txt1">
@@ -174,7 +176,7 @@ const page = () => {
                         </div>
                     </div>
                     <div className="popular_dis_input_main">
-                            <img src={male_img.src} className='male_img' alt="..." />
+                            <Image src={male_img.src} className='male_img' alt="..." width={35} height={35} />
                             <div className="popular_dis_input_div relative">
                                 <input type="text" placeholder='Add Discussion title' />
                                 <div className='absolute right-3 top-3 '>

@@ -9,7 +9,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 
 
-const profile = () => {
+const Profile = () => {
 
   const [selectedValue, setSelectedValue] = useState('');
 
@@ -75,4 +75,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
