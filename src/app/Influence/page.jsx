@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import imginf from "@/assets/inf.png"; 
+import imginf from "@/assets/Inf.png"; 
 import pop1_img from "@/assets/pop1.svg";
 import pop2_img from "@/assets/pop2.svg";
 import pop3_img from "@/assets/pop3.svg";

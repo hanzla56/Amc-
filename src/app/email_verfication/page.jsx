@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@mui/material'
 import logo from "@/assets/logo.png"
-import check_img from "@/assets/check.svg"
+import check_img from "@/assets/Check.svg"
 
 const page = () => {
     return (
